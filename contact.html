@@ -6,6 +6,76 @@
   <meta name="description" content="MULVA 2026: Machine Unlearning for Language, Vision and AI — ICVGIP 2026 workshop.">
   <title>Contact | MULVA 2026</title>
   <link rel="stylesheet" href="assets/style.css">
+  <style>
+    .pagehero {
+      position: relative;
+      isolation: isolate;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 330px;
+      padding: 54px clamp(24px, 6vw, 88px);
+      overflow: hidden;
+      color: #fff;
+      background: #111827 url("assets/mulva-hero.png") center 48% / cover no-repeat;
+      border-radius: 0;
+    }
+    .pagehero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: linear-gradient(90deg, rgba(5, 12, 28, .88) 0%, rgba(5, 12, 28, .68) 48%, rgba(5, 12, 28, .25) 100%);
+    }
+    .pagehero .eyebrow {
+      margin: 0 0 14px;
+      color: #fff;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 2.8px;
+      text-transform: uppercase;
+    }
+    .pagehero h1 {
+      max-width: 900px;
+      margin: 0 0 14px;
+      color: #fff;
+      font-size: clamp(42px, 6vw, 68px);
+      line-height: 1.08;
+    }
+    .pagehero > p:last-child {
+      max-width: 760px;
+      margin: 0;
+      color: rgba(255, 255, 255, .94);
+      font-size: clamp(17px, 2vw, 21px);
+      line-height: 1.55;
+    }
+    .contact .card {
+      height: 100%;
+    }
+    .contact .card h2 {
+      margin-top: .2rem;
+    }
+    .contact .card a {
+      overflow-wrap: anywhere;
+    }
+    @media (max-width: 640px) {
+      .pagehero {
+        min-height: 290px;
+        padding: 42px 24px;
+        background-position: center center;
+      }
+      .pagehero::before {
+        background: linear-gradient(90deg, rgba(5, 12, 28, .88), rgba(5, 12, 28, .58));
+      }
+      .pagehero .eyebrow {
+        font-size: 13px;
+        letter-spacing: 2px;
+      }
+      .pagehero h1 {
+        font-size: clamp(38px, 10vw, 48px);
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="header">
@@ -28,7 +98,7 @@
     <section class="pagehero">
       <p class="eyebrow">Get in touch</p>
       <h1>Contact</h1>
-      <p>For enquiries about MULVA 2026, contact the workshop primary contact.</p>
+      <p>For enquiries about MULVA 2026, contact the workshop primary contact</p>
     </section>
 
     <section class="section content contact">
@@ -37,22 +107,18 @@
         <h2>Biswajit Chatterjee</h2>
         <p class="aff">TCS Research</p>
         <p>
-          <a href="mailto:chatterjee.biswajit1@tcs.com">
-            chatterjee.biswajit1@tcs.com
-          </a>
+          <a href="mailto:chatterjee.biswajit1@tcs.com">chatterjee.biswajit1@tcs.com</a>
         </p>
         <p>
-          <a href="mailto:b.chatterjee007@gmail.com">
-            b.chatterjee007@gmail.com
-          </a>
+          <a href="mailto:b.chatterjee007@gmail.com">b.chatterjee007@gmail.com</a>
         </p>
       </article>
 
       <article class="card">
         <h2>About MULVA</h2>
         <p><b>MULVA:</b> Machine Unlearning for Language, Vision and AI</p>
-        <p>Half-day workshop at ICVGIP 2026.</p>
-        <p>Workshop date: 21 December 2026.</p>
+        <p>Half-day workshop at ICVGIP 2026</p>
+        <p>Workshop date: 21 December 2026</p>
       </article>
     </section>
   </main>
