@@ -1,19 +1,242 @@
+```html
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="MULVA 2026: Machine Unlearning for Language, Vision and AI — ICVGIP 2026 workshop.">
+  <meta name="description" content="MULVA 2026: Machine Unlearning for Language, Vision and AI — ICVGIP 2026 workshop">
   <title>Home | MULVA 2026</title>
   <link rel="stylesheet" href="assets/style.css">
+  <style>
+    /* Homepage readability improvements */
+    body {
+      font-size: 17px;
+    }
+
+    .nav a {
+      font-size: 14px;
+    }
+
+    .hero {
+      min-height: 490px;
+      padding-top: 78px;
+      padding-bottom: 78px;
+    }
+
+    .hero h1 {
+      font-size: clamp(58px, 7vw, 88px);
+    }
+
+    .hero .subtitle {
+      font-size: clamp(22px, 2.5vw, 30px);
+      line-height: 1.35;
+    }
+
+    .hero p:not(.eyebrow):not(.subtitle) {
+      font-size: 19px;
+      line-height: 1.65;
+    }
+
+    .meta span {
+      font-size: 14px;
+    }
+
+    .button {
+      font-size: 15px;
+      padding: 14px 20px;
+    }
+
+    .eyebrow {
+      font-size: 12px;
+    }
+
+    .copy p,
+    .muted {
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .section h2 {
+      font-size: clamp(30px, 3.5vw, 42px);
+    }
+
+    .card {
+      padding: 25px;
+    }
+
+    .card h3 {
+      font-size: 19px;
+      line-height: 1.4;
+    }
+
+    .card p {
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    .cta h2 {
+      font-size: 32px;
+    }
+
+    .cta p {
+      font-size: 16px;
+    }
+
+    .email {
+      font-size: 14px;
+    }
+
+    .footer {
+      font-size: 13px;
+    }
+
+    /* A more refined hero illustration */
+    .art {
+      height: 330px;
+      isolation: isolate;
+    }
+
+    .art::before {
+      content: "";
+      position: absolute;
+      width: 290px;
+      height: 290px;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 35% 30%,
+          rgba(105, 216, 200, .55), transparent 35%),
+        radial-gradient(circle at 70% 65%,
+          rgba(130, 119, 255, .65), transparent 55%),
+        radial-gradient(circle,
+          rgba(44, 102, 207, .65), rgba(28, 34, 83, .15) 72%);
+      box-shadow: 0 0 65px rgba(105, 140, 255, .22);
+      z-index: -1;
+    }
+
+    .ring {
+      width: 270px;
+      height: 270px;
+      border-color: rgba(174, 202, 255, .7);
+    }
+
+    .ring.r2 {
+      width: 340px;
+      height: 210px;
+      transform: rotate(40deg);
+      border-color: rgba(105, 216, 200, .75);
+    }
+
+    .ring.r3 {
+      width: 340px;
+      height: 230px;
+      transform: rotate(-50deg);
+      border-color: rgba(177, 164, 255, .75);
+    }
+
+    .core {
+      width: 115px;
+      height: 115px;
+      font-size: 25px;
+      background: linear-gradient(135deg, #8c85ff, #2865d8);
+      box-shadow:
+        0 0 0 12px rgba(101, 88, 217, .16),
+        0 0 55px rgba(95, 150, 255, .35);
+    }
+
+    .pill {
+      font-size: 11px;
+      padding: 10px 13px;
+      background: rgba(31, 40, 81, .92);
+      backdrop-filter: blur(8px);
+    }
+
+    /* Research-theme cards: no numerical labels */
+    .theme-card-icon {
+      display: inline-grid;
+      place-items: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: #eeedff;
+      color: var(--purple);
+      font-size: 25px;
+      margin-bottom: 8px;
+    }
+
+    @media (max-width: 980px) {
+      .hero {
+        min-height: auto;
+      }
+
+      .nav a {
+        font-size: 12px;
+      }
+
+      .card {
+        padding: 20px;
+      }
+    }
+
+    @media (max-width: 740px) {
+      body {
+        font-size: 16px;
+      }
+
+      .hero {
+        padding: 48px 24px 25px;
+      }
+
+      .hero h1 {
+        font-size: clamp(48px, 12vw, 65px);
+      }
+
+      .hero .subtitle {
+        font-size: 23px;
+      }
+
+      .hero p:not(.eyebrow):not(.subtitle) {
+        font-size: 17px;
+      }
+
+      .art {
+        height: 250px;
+        transform: scale(.85);
+        margin-top: 10px;
+      }
+
+      .copy p,
+      .muted {
+        font-size: 16px;
+      }
+
+      .card h3 {
+        font-size: 19px;
+      }
+
+      .card p {
+        font-size: 16px;
+      }
+
+      .cta h2 {
+        font-size: 28px;
+      }
+
+      .footer {
+        font-size: 12px;
+      }
+    }
+  </style>
 </head>
+
 <body>
   <header class="header">
     <a class="brand" href="index.html">
       <b>M</b>MULVA
       <small>ICVGIP 2026 Workshop</small>
     </a>
+
     <button class="toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
     <nav class="nav">
       <a class="active" href="index.html">Home</a>
       <a href="speakers.html">Speakers</a>
@@ -41,7 +264,7 @@
         <a class="button" href="call-for-presentations.html">Explore Workshop Themes →</a>
       </div>
 
-      <div class="art">
+      <div class="art" aria-label="Abstract illustration of AI memory and machine unlearning">
         <div class="ring"></div>
         <div class="ring r2"></div>
         <div class="ring r3"></div>
@@ -58,30 +281,36 @@
         <p class="eyebrow">About the workshop</p>
         <h2>Making forgetting a first-class capability of AI</h2>
       </div>
+
       <div class="copy">
-        <p>Machine unlearning seeks to remove the influence of designated data, concepts, identities or knowledge from trained models while preserving their broader utility. The need spans privacy and data-removal requirements, copyright concerns, model correction, safety, bias mitigation and responsible AI deployment.</p>
-        <p>MULVA brings together researchers and practitioners working across computer vision, natural language processing, multimodal learning, generative AI and foundation models to discuss methods, evaluation, verification and real-world challenges.</p>
+        <p>Machine unlearning seeks to remove the influence of designated data, concepts, identities or knowledge from trained models while preserving their broader utility</p>
+        <p>The need spans privacy and data-removal requirements, copyright concerns, model correction, safety, bias mitigation and responsible AI deployment</p>
+        <p>MULVA brings together researchers and practitioners working across computer vision, natural language processing, multimodal learning, generative AI and foundation models to discuss methods, evaluation, verification and real-world challenges</p>
       </div>
     </section>
 
     <section class="section wash">
       <p class="eyebrow">Workshop at a glance</p>
+
       <div class="grid">
         <article class="card">
           <span class="num">▦</span>
           <h3>Date</h3>
           <p>21 December 2026</p>
         </article>
+
         <article class="card">
           <span class="num">◷</span>
           <h3>Format</h3>
           <p>Half-day<br><small>Talks, presentations and discussion</small></p>
         </article>
+
         <article class="card">
           <span class="num">⌘</span>
           <h3>Research scope</h3>
           <p>Vision · Language · Multimodal AI</p>
         </article>
+
         <article class="card">
           <span class="num">◎</span>
           <h3>Audience</h3>
@@ -93,28 +322,31 @@
     <section class="section">
       <p class="eyebrow">Research themes</p>
       <h2>From forgetting algorithms to trustworthy deployment</h2>
-      <p class="muted">The workshop welcomes theoretical, methodological, empirical, systems, benchmarking and application-oriented contributions.</p>
+      <p class="muted">The workshop welcomes theoretical, methodological, empirical, systems, benchmarking and application-oriented contributions</p>
 
       <div class="grid">
         <article class="card">
-          <span class="num">01</span>
+          <span class="theme-card-icon" aria-hidden="true">⚙</span>
           <h3>Foundations &amp; methods</h3>
-          <p>Exact, approximate, certified and parameter-efficient unlearning; formulations and guarantees.</p>
+          <p>Exact, approximate, certified and parameter-efficient unlearning; formulations and guarantees</p>
         </article>
+
         <article class="card">
-          <span class="num">02</span>
+          <span class="theme-card-icon" aria-hidden="true">◈</span>
           <h3>Vision, language &amp; multimodal</h3>
-          <p>Unlearning in computer vision, NLP, LLMs, vision-language systems and foundation models.</p>
+          <p>Unlearning in computer vision, NLP, LLMs, vision-language systems and foundation models</p>
         </article>
+
         <article class="card">
-          <span class="num">03</span>
+          <span class="theme-card-icon" aria-hidden="true">▥</span>
           <h3>Evaluation &amp; verification</h3>
-          <p>Benchmarks, metrics, attack-based evaluation and forgetting–retention trade-offs.</p>
+          <p>Benchmarks, metrics, attack-based evaluation and forgetting–retention trade-offs</p>
         </article>
+
         <article class="card">
-          <span class="num">04</span>
+          <span class="theme-card-icon" aria-hidden="true">⬡</span>
           <h3>Privacy &amp; responsible AI</h3>
-          <p>Privacy leakage, copyright, safety, fairness and responsible deployment.</p>
+          <p>Privacy leakage, copyright, safety, fairness and responsible deployment</p>
         </article>
       </div>
 
@@ -125,8 +357,9 @@
       <div>
         <p class="eyebrow">Join the conversation</p>
         <h2>Can we really make AI forget?</h2>
-        <p class="muted">Explore open challenges in reliable, efficient and verifiable machine unlearning.</p>
+        <p class="muted">Explore open challenges in reliable, efficient and verifiable machine unlearning</p>
       </div>
+
       <a class="button darkbutton" href="program.html">View Workshop Programme →</a>
     </section>
   </main>
@@ -140,3 +373,4 @@
   <script src="assets/site.js"></script>
 </body>
 </html>
+```
