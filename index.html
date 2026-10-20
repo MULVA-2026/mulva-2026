@@ -482,6 +482,47 @@
     font-size: 13px;
   }
 }
+
+    /* Slightly larger section labels and topic link */
+    .hero-banner-overlay > .eyebrow {
+      font-size: 15px;
+      letter-spacing: 3.2px;
+      font-weight: 700;
+    }
+
+    .section > .eyebrow,
+    .section > div > .eyebrow {
+      font-size: 15px;
+      letter-spacing: 2.8px;
+      font-weight: 700;
+    }
+
+    .section.intro .eyebrow,
+    .section.wash > .eyebrow,
+    .section:not(.intro):not(.wash) > .eyebrow {
+      font-size: 15px;
+    }
+
+    .section > p > a.email {
+      display: inline-block;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 740px) {
+      .hero-banner-overlay > .eyebrow,
+      .section > .eyebrow,
+      .section > div > .eyebrow {
+        font-size: 13px;
+        letter-spacing: 2.2px;
+      }
+
+      .section > p > a.email {
+        font-size: 17px;
+      }
+    }
+
   </style>
 </head>
 
