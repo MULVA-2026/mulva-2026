@@ -2,10 +2,177 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="MULVA 2026: Machine Unlearning for Language, Vision and AI — ICVGIP 2026 workshop.">
   <title>Invited Speakers | MULVA 2026</title>
   <link rel="stylesheet" href="assets/style.css">
+
+  <style>
+    /* Consistent full-width banner used on the homepage */
+    .pagehero {
+      position: relative;
+      width: 100%;
+      min-height: 330px;
+      box-sizing: border-box;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 54px clamp(24px, 7vw, 100px);
+      background: #11172b;
+      isolation: isolate;
+      border-radius: 0;
+      color: #ffffff;
+    }
+
+    .pagehero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: url("assets/mulva-hero.png");
+      background-size: cover;
+      background-position: center 48%;
+      z-index: -2;
+    }
+
+    .pagehero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        90deg,
+        rgba(8, 13, 35, 0.92) 0%,
+        rgba(8, 13, 35, 0.78) 45%,
+        rgba(8, 13, 35, 0.22) 100%
+      );
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .pagehero .eyebrow {
+      color: #d4dcff;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      margin: 0 0 10px;
+    }
+
+    .pagehero h1 {
+      color: #ffffff;
+      font-size: clamp(42px, 6vw, 68px);
+      line-height: 1.08;
+      margin: 0 0 14px;
+    }
+
+    .pagehero > p:last-child {
+      max-width: 760px;
+      color: #ffffff;
+      font-size: clamp(17px, 2vw, 21px);
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    /* Match typography and card spacing to the homepage */
+    .section.content {
+      padding-top: 42px;
+      padding-bottom: 52px;
+    }
+
+    .people {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .person {
+      padding: 28px;
+      border: 1px solid #e3eaf6;
+      border-radius: 18px;
+      background: #ffffff;
+      box-shadow: 0 4px 18px rgba(28, 58, 110, 0.05);
+    }
+
+    .person .initials {
+      display: grid;
+      place-items: center;
+      width: 76px;
+      height: 76px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      background: #e4eeff;
+      color: #0758e8;
+      font-size: 25px;
+      font-weight: 700;
+    }
+
+    .person:nth-child(2) .initials {
+      background: #eee8ff;
+      color: #6637e8;
+    }
+
+    .person .eyebrow {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: #1765ed;
+      margin-bottom: 8px;
+    }
+
+    .person h2 {
+      font-size: clamp(22px, 2.5vw, 28px);
+      line-height: 1.3;
+      color: #101b43;
+      margin: 0 0 10px;
+    }
+
+    .person .aff {
+      color: #344563;
+      font-size: 17px;
+      font-weight: 600;
+      line-height: 1.5;
+      margin-bottom: 12px;
+    }
+
+    .person p:not(.eyebrow):not(.aff) {
+      color: #465574;
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 740px) {
+      .pagehero {
+        min-height: 290px;
+        padding: 42px 24px;
+      }
+
+      .pagehero .eyebrow {
+        font-size: 13px;
+        letter-spacing: 2.2px;
+      }
+
+      .people {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .person {
+        padding: 22px;
+      }
+
+      .person h2 {
+        font-size: 24px;
+      }
+
+      .person .aff {
+        font-size: 16px;
+      }
+
+      .person p:not(.eyebrow):not(.aff) {
+        font-size: 15px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -29,16 +196,15 @@
 
   <main>
     <section class="pagehero">
-      <p class="eyebrow">MULVA 2026</p>
+      <p class="eyebrow">ICVGIP 2026 WORKSHOP</p>
       <h1>Invited Speakers</h1>
       <p>Perspectives across machine unlearning, language, vision and trustworthy AI.</p>
     </section>
 
     <section class="section content">
       <div class="people">
-
         <article class="person">
-          <div class="initials">AM</div>
+          <div class="initials" aria-hidden="true">AM</div>
           <p class="eyebrow">Invited Speaker</p>
           <h2>Prof. (Dr.) Animesh Mukherjee</h2>
           <p class="aff">Indian Institute of Technology Kharagpur</p>
@@ -46,14 +212,12 @@
         </article>
 
         <article class="person">
-          <div class="initials">RP</div>
+          <div class="initials" aria-hidden="true">RP</div>
           <p class="eyebrow">Invited Speaker</p>
           <h2>Dr. Rajat Pal</h2>
           <p class="aff">TCS Research</p>
           <p>Perspective: Industry AI research, innovation and real-world deployment of intelligent systems.</p>
         </article>
-
-
       </div>
     </section>
   </main>
