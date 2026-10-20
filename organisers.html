@@ -3,14 +3,52 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-
-  <meta name="description" content="MULVA 2026: Machine Unlearning for Language, Vision and AI — ICVGIP 2026 workshop.">
-
+  <meta name="description" content="MULVA 2026: Machine Unlearning for Language, Vision and AI — ICVGIP 2026 workshop">
   <title>Organisers | MULVA 2026</title>
-
   <link rel="stylesheet" href="assets/style.css">
 
   <style>
+    /* Page banner: consistent with the MULVA homepage and Speakers page */
+    .pagehero {
+      position: relative;
+      isolation: isolate;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 330px;
+      padding: 58px clamp(24px, 6vw, 88px);
+      overflow: hidden;
+      color: #fff;
+      background-image: linear-gradient(90deg, rgba(8, 17, 39, .88) 0%, rgba(8, 17, 39, .62) 52%, rgba(8, 17, 39, .22) 100%), url("assets/mulva-hero.png");
+      background-size: cover;
+      background-position: center 48%;
+    }
+
+    .pagehero .eyebrow {
+      margin: 0 0 14px;
+      color: #fff;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 3.2px;
+      text-transform: uppercase;
+    }
+
+    .pagehero h1 {
+      max-width: 900px;
+      margin: 0 0 16px;
+      color: #fff;
+      font-size: clamp(42px, 6vw, 68px);
+      line-height: 1.08;
+    }
+
+    .pagehero > p:last-child {
+      max-width: 760px;
+      margin: 0;
+      color: rgba(255, 255, 255, .94);
+      font-size: clamp(17px, 2vw, 21px);
+      line-height: 1.55;
+    }
+
     .organiser-photo {
       width: 120px;
       height: 120px;
@@ -21,22 +59,57 @@
       margin: 0 auto 1rem;
       border: 3px solid var(--line);
     }
+
+    .person h2 {
+      text-align: center;
+    }
+
+    .person .aff {
+      text-align: center;
+    }
+
+    .person > p:not(.aff) {
+      line-height: 1.65;
+    }
+
+    .person > a.email {
+      display: block;
+      margin-top: .55rem;
+      font-size: 15px;
+      overflow-wrap: anywhere;
+    }
+
+    @media (max-width: 640px) {
+      .pagehero {
+        min-height: 290px;
+        padding: 42px 24px;
+        background-position: center;
+      }
+
+      .pagehero .eyebrow {
+        font-size: 13px;
+        letter-spacing: 2.4px;
+      }
+
+      .pagehero h1 {
+        font-size: clamp(36px, 10vw, 48px);
+      }
+
+      .organiser-photo {
+        width: 108px;
+        height: 108px;
+      }
+    }
   </style>
 </head>
-
 <body>
-
   <header class="header">
     <a class="brand" href="index.html">
       <b>M</b>MULVA
       <small>ICVGIP 2026 Workshop</small>
     </a>
 
-    <button
-      class="toggle"
-      aria-label="Toggle navigation"
-      aria-expanded="false"
-    >☰</button>
+    <button class="toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
 
     <nav class="nav">
       <a href="index.html">Home</a>
@@ -49,113 +122,48 @@
   </header>
 
   <main>
-
     <section class="pagehero">
-      <p class="eyebrow">The team</p>
+      <p class="eyebrow">MULVA 2026 · The team</p>
       <h1>Organising Committee</h1>
-      <p>Academic and industry perspectives on trustworthy and responsible AI.</p>
+      <p>Meet the academic and industry researchers organising the workshop on machine unlearning and trustworthy AI</p>
     </section>
 
     <section class="section content">
       <div class="people">
-
-        <!-- Organiser 1: Biswajit Chatterjee -->
         <article class="person">
-          <img
-            src="assets/Biswajit.jpeg"
-            alt="Biswajit Chatterjee"
-            class="organiser-photo"
-            loading="lazy"
-          >
-
+          <img src="assets/Biswajit.jpeg" alt="Biswajit Chatterjee" class="organiser-photo" loading="lazy">
           <h2>Biswajit Chatterjee</h2>
           <p class="aff">TCS Research · Primary Contact</p>
-
-          <p>
-            Scientist at TCS Research and PhD scholar at IIT Patna.
-            Research interests include AI, LLMs, knowledge-augmented
-            learning, code generation and AI systems for industrial automation.
-          </p>
-
-          <a class="email" href="mailto:chatterjee.biswajit1@tcs.com">
-            chatterjee.biswajit1@tcs.com
-          </a>
-
-          <a class="email" href="mailto:b.chatterjee007@gmail.com">
-            b.chatterjee007@gmail.com
-          </a>
+          <p>Scientist at TCS Research and PhD scholar at IIT Patna. Research interests include AI, LLMs, knowledge-augmented learning, code generation and AI systems for industrial automation</p>
+          <a class="email" href="mailto:chatterjee.biswajit1@tcs.com">chatterjee.biswajit1@tcs.com</a>
+          <a class="email" href="mailto:b.chatterjee007@gmail.com">b.chatterjee007@gmail.com</a>
         </article>
 
-        <!-- Organiser 2: Prabir Mallick -->
         <article class="person">
-          <img
-            src="assets/Prabir.jpeg"
-            alt="Prabir Mallick"
-            class="organiser-photo"
-            loading="lazy"
-          >
-
+          <img src="assets/Prabir.jpeg" alt="Prabir Mallick" class="organiser-photo" loading="lazy">
           <h2>Prabir Mallick</h2>
           <p class="aff">TCS Research</p>
-
-          <p>
-            Researcher working in AI, NLP, knowledge representation
-            and machine learning.
-          </p>
-
-          <a class="email" href="mailto:mallick.prabir@tcs.com">
-            mallick.prabir@tcs.com
-          </a>
+          <p>Researcher working in AI, NLP, knowledge representation and machine learning</p>
+          <a class="email" href="mailto:mallick.prabir@tcs.com">mallick.prabir@tcs.com</a>
         </article>
 
-        <!-- Organiser 3: Tirthankar Dasgupta -->
         <article class="person">
-          <img
-            src="assets/Tirthankar.jpeg"
-            alt="Tirthankar Dasgupta"
-            class="organiser-photo"
-            loading="lazy"
-          >
-
+          <img src="assets/Tirthankar.jpeg" alt="Tirthankar Dasgupta" class="organiser-photo" loading="lazy">
           <h2>Tirthankar Dasgupta</h2>
           <p class="aff">TCS Research</p>
-
-          <p>
-            Senior Scientist working in AI, machine learning, NLP,
-            knowledge-driven systems and applied AI.
-          </p>
-
-          <a class="email" href="mailto:dasgupta.tirthankar@tcs.com">
-            dasgupta.tirthankar@tcs.com
-          </a>
+          <p>Senior Scientist working in AI, machine learning, NLP, knowledge-driven systems and applied AI</p>
+          <a class="email" href="mailto:dasgupta.tirthankar@tcs.com">dasgupta.tirthankar@tcs.com</a>
         </article>
 
-        <!-- Organiser 4: Sriparna Saha -->
         <article class="person">
-          <img
-            src="assets/Sriparna.jpeg"
-            alt="Prof. Sriparna Saha"
-            class="organiser-photo"
-            loading="lazy"
-          >
-
+          <img src="assets/Sriparna.jpeg" alt="Prof. Sriparna Saha" class="organiser-photo" loading="lazy">
           <h2>Sriparna Saha</h2>
           <p class="aff">Indian Institute of Technology Patna</p>
-
-          <p>
-            Associate Professor in Computer Science and Engineering.
-            Research interests include machine learning, deep learning,
-            pattern recognition, NLP and related AI areas.
-          </p>
-
-          <a class="email" href="mailto:sriparna@iitp.ac.in">
-            sriparna@iitp.ac.in
-          </a>
+          <p>Associate Professor in Computer Science and Engineering. Research interests include machine learning, deep learning, pattern recognition, NLP and related AI areas</p>
+          <a class="email" href="mailto:sriparna@iitp.ac.in">sriparna@iitp.ac.in</a>
         </article>
-
       </div>
     </section>
-
   </main>
 
   <footer class="footer">
@@ -165,6 +173,5 @@
   </footer>
 
   <script src="assets/site.js"></script>
-
 </body>
 </html>
