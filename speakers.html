@@ -8,7 +8,27 @@
   <link rel="stylesheet" href="assets/style.css">
 
   <style>
-    /* Consistent full-width banner used on the homepage */
+    /* Brand styling consistent across all pages */
+    .header .brand {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      font-size: 28px;
+      font-weight: 800;
+      line-height: 1.15;
+      text-decoration: none;
+    }
+
+    .header .brand small {
+      display: block;
+      margin-top: 5px;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    /* Full-width hero banner */
     .pagehero {
       position: relative;
       width: 100%;
@@ -22,7 +42,7 @@
       background: #11172b;
       isolation: isolate;
       border-radius: 0;
-      color: #ffffff;
+      color: #fff;
     }
 
     .pagehero::before {
@@ -39,7 +59,12 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(90deg, rgba(8, 13, 35, 0.92) 0%, rgba(8, 13, 35, 0.78) 45%, rgba(8, 13, 35, 0.22) 100%);
+      background: linear-gradient(
+        90deg,
+        rgba(8, 13, 35, .92) 0%,
+        rgba(8, 13, 35, .78) 45%,
+        rgba(8, 13, 35, .22) 100%
+      );
       z-index: -1;
       pointer-events: none;
     }
@@ -53,7 +78,7 @@
     }
 
     .pagehero h1 {
-      color: #ffffff;
+      color: #fff;
       font-size: clamp(42px, 6vw, 68px);
       line-height: 1.08;
       margin: 0 0 14px;
@@ -61,7 +86,7 @@
 
     .pagehero > p:last-child {
       max-width: 760px;
-      color: #ffffff;
+      color: #fff;
       font-size: clamp(17px, 2vw, 21px);
       line-height: 1.55;
       margin: 0;
@@ -72,6 +97,7 @@
       padding-bottom: 52px;
     }
 
+    /* Speaker cards */
     .people {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -82,8 +108,8 @@
       padding: 28px;
       border: 1px solid #e3eaf6;
       border-radius: 18px;
-      background: #ffffff;
-      box-shadow: 0 4px 18px rgba(28, 58, 110, 0.05);
+      background: #fff;
+      box-shadow: 0 4px 18px rgba(28, 58, 110, .05);
       text-align: center;
     }
 
@@ -98,7 +124,7 @@
       border-radius: 50%;
       margin: 0 auto 22px;
       border: 5px solid #e4eeff;
-      box-shadow: 0 5px 18px rgba(28, 58, 110, 0.12);
+      box-shadow: 0 5px 18px rgba(28, 58, 110, .12);
     }
 
     .person:nth-child(2) .speaker-photo {
@@ -151,11 +177,24 @@
       margin-bottom: 0;
     }
 
-    .footer { font-size: 13px; }
+    .footer {
+      font-size: 13px;
+    }
+
     .footer strong,
-    .footer span { font-size: inherit; }
+    .footer span {
+      font-size: inherit;
+    }
 
     @media (max-width: 740px) {
+      .header .brand {
+        font-size: 24px;
+      }
+
+      .header .brand small {
+        font-size: 14px;
+      }
+
       .pagehero {
         min-height: 290px;
         padding: 42px 24px;
@@ -171,15 +210,30 @@
         gap: 16px;
       }
 
-      .person { padding: 22px; }
+      .person {
+        padding: 22px;
+      }
+
       .speaker-photo {
         width: 160px;
         height: 160px;
       }
-      .person h2 { font-size: 24px; }
-      .person .aff { font-size: 16px; }
-      .person p:not(.eyebrow):not(.aff) { font-size: 15px; }
-      .footer { font-size: 12px; }
+
+      .person h2 {
+        font-size: 24px;
+      }
+
+      .person .aff {
+        font-size: 16px;
+      }
+
+      .person p:not(.eyebrow):not(.aff) {
+        font-size: 15px;
+      }
+
+      .footer {
+        font-size: 12px;
+      }
     }
   </style>
 </head>
@@ -187,7 +241,7 @@
 <body>
   <header class="header">
     <a class="brand" href="index.html">
-      <b>M</b>MULVA
+      <span>MULVA</span>
       <small>ICVGIP 2026 Workshop</small>
     </a>
 
@@ -198,37 +252,63 @@
       <a class="active" href="speakers.html">Speakers</a>
       <a href="organisers.html">Organisers</a>
       <a href="program.html">Programme</a>
-      <a href="call-for-presentations.html">Call for Presentations</a>
+      <a href="call-for-presentations.html">Call for Papers</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
   <main>
     <section class="pagehero">
-      <p class="eyebrow">ICVGIP 2026 WORKSHOP</p>
+      <p class="eyebrow">ICVGIP 2026 Workshop</p>
       <h1>Invited Speakers</h1>
       <p>Perspectives across machine unlearning, language, vision and trustworthy AI</p>
     </section>
 
     <section class="section content">
       <div class="people">
+
         <article class="person">
-          <img class="speaker-photo" src="assets/Animesh.jpg" alt="Prof. (Dr.) Animesh Mukherjee" loading="lazy">
+          <img
+            class="speaker-photo"
+            src="assets/Animesh.jpg"
+            alt="Prof. (Dr.) Animesh Mukherjee"
+            loading="lazy"
+          >
+
           <p class="eyebrow">Invited Speaker</p>
           <h2>Prof. (Dr.) Animesh Mukherjee</h2>
           <p class="aff">Indian Institute of Technology Kharagpur</p>
           <p>Research perspective spanning language technologies and artificial intelligence</p>
-          <a class="speaker-profile-link" href="https://cse.iitkgp.ac.in/~animeshm/" target="_blank" rel="noopener noreferrer">Academic Profile ↗</a>
+
+          <a
+            class="speaker-profile-link"
+            href="https://cse.iitkgp.ac.in/~animeshm/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Academic Profile ↗</a>
         </article>
 
         <article class="person">
-          <img class="speaker-photo" src="assets/Rajat.jpg" alt="Dr. Rajat Pal" loading="lazy">
+          <img
+            class="speaker-photo"
+            src="assets/Rajat.jpg"
+            alt="Dr. Rajat Pal"
+            loading="lazy"
+          >
+
           <p class="eyebrow">Invited Speaker</p>
           <h2>Dr. Rajat Pal</h2>
           <p class="aff">TCS Research</p>
           <p>Perspective: Industry AI research, innovation and real-world deployment of intelligent systems</p>
-          <a class="speaker-profile-link" href="https://www.linkedin.com/in/creativerajat/" target="_blank" rel="noopener noreferrer">LinkedIn Profile ↗</a>
+
+          <a
+            class="speaker-profile-link"
+            href="https://www.linkedin.com/in/creativerajat/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >LinkedIn Profile ↗</a>
         </article>
+
       </div>
     </section>
   </main>
