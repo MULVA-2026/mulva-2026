@@ -3,10 +3,32 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="MULVA 2026: Machine Unlearning for Language, Vision and AI — ICVGIP 2026 workshop.">
+  <meta name="description" content="MULVA 2026: Machine Unlearning for Language, Vision and AI — ICVGIP 2026 workshop">
   <title>Contact | MULVA 2026</title>
   <link rel="stylesheet" href="assets/style.css">
+
   <style>
+    /* Brand styling consistent with the other pages */
+    .header .brand {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      font-size: 28px;
+      font-weight: 800;
+      line-height: 1.15;
+      text-decoration: none;
+    }
+
+    .header .brand small {
+      display: block;
+      margin-top: 5px;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    /* Full-width hero banner */
     .pagehero {
       position: relative;
       isolation: isolate;
@@ -20,13 +42,20 @@
       background: #111827 url("assets/mulva-hero.png") center 48% / cover no-repeat;
       border-radius: 0;
     }
+
     .pagehero::before {
       content: "";
       position: absolute;
       inset: 0;
       z-index: -1;
-      background: linear-gradient(90deg, rgba(5, 12, 28, .88) 0%, rgba(5, 12, 28, .68) 48%, rgba(5, 12, 28, .25) 100%);
+      background: linear-gradient(
+        90deg,
+        rgba(5, 12, 28, .88) 0%,
+        rgba(5, 12, 28, .68) 48%,
+        rgba(5, 12, 28, .25) 100%
+      );
     }
+
     .pagehero .eyebrow {
       margin: 0 0 14px;
       color: #fff;
@@ -35,6 +64,7 @@
       letter-spacing: 2.8px;
       text-transform: uppercase;
     }
+
     .pagehero h1 {
       max-width: 900px;
       margin: 0 0 14px;
@@ -42,6 +72,7 @@
       font-size: clamp(42px, 6vw, 68px);
       line-height: 1.08;
     }
+
     .pagehero > p:last-child {
       max-width: 760px;
       margin: 0;
@@ -49,54 +80,76 @@
       font-size: clamp(17px, 2vw, 21px);
       line-height: 1.55;
     }
+
     .contact .card {
       height: 100%;
     }
+
     .contact .card h2 {
       margin-top: .2rem;
     }
+
     .contact .card a {
       overflow-wrap: anywhere;
     }
+
     @media (max-width: 640px) {
+      .header .brand {
+        font-size: 24px;
+      }
+
+      .header .brand small {
+        font-size: 14px;
+      }
+
       .pagehero {
         min-height: 290px;
         padding: 42px 24px;
         background-position: center center;
       }
+
       .pagehero::before {
-        background: linear-gradient(90deg, rgba(5, 12, 28, .88), rgba(5, 12, 28, .58));
+        background: linear-gradient(
+          90deg,
+          rgba(5, 12, 28, .88),
+          rgba(5, 12, 28, .58)
+        );
       }
+
       .pagehero .eyebrow {
         font-size: 13px;
         letter-spacing: 2px;
       }
+
       .pagehero h1 {
         font-size: clamp(38px, 10vw, 48px);
       }
     }
   </style>
 </head>
+
 <body>
   <header class="header">
     <a class="brand" href="index.html">
-      <b>M</b>MULVA
+      <span>MULVA</span>
       <small>ICVGIP 2026 Workshop</small>
     </a>
+
     <button class="toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
     <nav class="nav">
       <a href="index.html">Home</a>
       <a href="speakers.html">Speakers</a>
       <a href="organisers.html">Organisers</a>
       <a href="program.html">Programme</a>
-      <a href="call-for-presentations.html">Call for Presentations</a>
+      <a href="call-for-presentations.html">Call for Papers</a>
       <a class="active" href="contact.html">Contact</a>
     </nav>
   </header>
 
   <main>
     <section class="pagehero">
-      <p class="eyebrow">Get in touch</p>
+      <p class="eyebrow">ICVGIP 2026 Workshop</p>
       <h1>Contact</h1>
       <p>For enquiries about MULVA 2026, contact the workshop primary contact</p>
     </section>
@@ -106,9 +159,11 @@
         <p class="eyebrow">Primary Contact</p>
         <h2>Biswajit Chatterjee</h2>
         <p class="aff">TCS Research</p>
+
         <p>
           <a href="mailto:chatterjee.biswajit1@tcs.com">chatterjee.biswajit1@tcs.com</a>
         </p>
+
         <p>
           <a href="mailto:b.chatterjee007@gmail.com">b.chatterjee007@gmail.com</a>
         </p>
