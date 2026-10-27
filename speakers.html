@@ -39,12 +39,7 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(
-        90deg,
-        rgba(8, 13, 35, 0.92) 0%,
-        rgba(8, 13, 35, 0.78) 45%,
-        rgba(8, 13, 35, 0.22) 100%
-      );
+      background: linear-gradient(90deg, rgba(8, 13, 35, 0.92) 0%, rgba(8, 13, 35, 0.78) 45%, rgba(8, 13, 35, 0.22) 100%);
       z-index: -1;
       pointer-events: none;
     }
@@ -72,7 +67,6 @@
       margin: 0;
     }
 
-    /* Match typography and card spacing to the homepage */
     .section.content {
       padding-top: 42px;
       padding-bottom: 52px;
@@ -90,24 +84,25 @@
       border-radius: 18px;
       background: #ffffff;
       box-shadow: 0 4px 18px rgba(28, 58, 110, 0.05);
+      text-align: center;
     }
 
-    .person .initials {
-      display: grid;
-      place-items: center;
-      width: 76px;
-      height: 76px;
+    /* Large circular speaker portraits */
+    .speaker-photo {
+      display: block;
+      width: 180px;
+      height: 180px;
+      max-width: 100%;
+      object-fit: cover;
+      object-position: center top;
       border-radius: 50%;
-      margin-bottom: 20px;
-      background: #e4eeff;
-      color: #0758e8;
-      font-size: 25px;
-      font-weight: 700;
+      margin: 0 auto 22px;
+      border: 5px solid #e4eeff;
+      box-shadow: 0 5px 18px rgba(28, 58, 110, 0.12);
     }
 
-    .person:nth-child(2) .initials {
-      background: #eee8ff;
-      color: #6637e8;
+    .person:nth-child(2) .speaker-photo {
+      border-color: #eee8ff;
     }
 
     .person .eyebrow {
@@ -140,6 +135,16 @@
       margin-bottom: 0;
     }
 
+    .brand,
+    .brand b,
+    .brand small {
+      font-size: inherit;
+    }
+
+    .footer { font-size: 13px; }
+    .footer strong,
+    .footer span { font-size: inherit; }
+
     @media (max-width: 740px) {
       .pagehero {
         min-height: 290px;
@@ -156,53 +161,16 @@
         gap: 16px;
       }
 
-      .person {
-        padding: 22px;
+      .person { padding: 22px; }
+      .speaker-photo {
+        width: 160px;
+        height: 160px;
       }
-
-      .person h2 {
-        font-size: 24px;
-      }
-
-      .person .aff {
-        font-size: 16px;
-      }
-
-      .person p:not(.eyebrow):not(.aff) {
-        font-size: 15px;
-      }
+      .person h2 { font-size: 24px; }
+      .person .aff { font-size: 16px; }
+      .person p:not(.eyebrow):not(.aff) { font-size: 15px; }
+      .footer { font-size: 12px; }
     }
-    
-/* Match the homepage brand and footer typography */
-.brand {
-  font-size: inherit;
-}
-
-.brand b {
-  font-size: inherit;
-}
-
-.brand small {
-  font-size: inherit;
-}
-
-.footer {
-  font-size: 13px;
-}
-
-.footer strong {
-  font-size: inherit;
-}
-
-.footer span {
-  font-size: inherit;
-}
-
-@media (max-width: 740px) {
-  .footer {
-    font-size: 12px;
-  }
-}
   </style>
 </head>
 
@@ -229,25 +197,25 @@
     <section class="pagehero">
       <p class="eyebrow">ICVGIP 2026 WORKSHOP</p>
       <h1>Invited Speakers</h1>
-      <p>Perspectives across machine unlearning, language, vision and trustworthy AI.</p>
+      <p>Perspectives across machine unlearning, language, vision and trustworthy AI</p>
     </section>
 
     <section class="section content">
       <div class="people">
         <article class="person">
-          <div class="initials" aria-hidden="true">AM</div>
+          <img class="speaker-photo" src="assets/Animesh.jpg" alt="Prof. (Dr.) Animesh Mukherjee" loading="lazy">
           <p class="eyebrow">Invited Speaker</p>
           <h2>Prof. (Dr.) Animesh Mukherjee</h2>
           <p class="aff">Indian Institute of Technology Kharagpur</p>
-          <p>Research perspective spanning language technologies and artificial intelligence.</p>
+          <p>Research perspective spanning language technologies and artificial intelligence</p>
         </article>
 
         <article class="person">
-          <div class="initials" aria-hidden="true">RP</div>
+          <img class="speaker-photo" src="assets/Rajat.jpg" alt="Dr. Rajat Pal" loading="lazy">
           <p class="eyebrow">Invited Speaker</p>
           <h2>Dr. Rajat Pal</h2>
           <p class="aff">TCS Research</p>
-          <p>Perspective: Industry AI research, innovation and real-world deployment of intelligent systems.</p>
+          <p>Perspective: Industry AI research, innovation and real-world deployment of intelligent systems</p>
         </article>
       </div>
     </section>
