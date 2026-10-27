@@ -8,7 +8,27 @@
   <link rel="stylesheet" href="assets/style.css">
 
   <style>
-    /* Page banner: consistent with the MULVA homepage and Speakers page */
+    /* Brand styling consistent across all pages */
+    .header .brand {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      font-size: 28px;
+      font-weight: 800;
+      line-height: 1.15;
+      text-decoration: none;
+    }
+
+    .header .brand small {
+      display: block;
+      margin-top: 5px;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    /* Full-width hero banner */
     .pagehero {
       position: relative;
       isolation: isolate;
@@ -19,9 +39,20 @@
       padding: 58px clamp(24px, 6vw, 88px);
       overflow: hidden;
       color: #fff;
-      background-image: linear-gradient(90deg, rgba(8, 17, 39, .88) 0%, rgba(8, 17, 39, .62) 52%, rgba(8, 17, 39, .22) 100%), url("assets/mulva-hero.png");
-      background-size: cover;
-      background-position: center 48%;
+      background: #101a2a url("assets/mulva-hero.png") center 48% / cover no-repeat;
+    }
+
+    .pagehero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: linear-gradient(
+        90deg,
+        rgba(8, 17, 39, .88) 0%,
+        rgba(8, 17, 39, .62) 52%,
+        rgba(8, 17, 39, .22) 100%
+      );
     }
 
     .pagehero .eyebrow {
@@ -49,6 +80,7 @@
       line-height: 1.55;
     }
 
+    /* Organiser photographs */
     .organiser-photo {
       width: 120px;
       height: 120px;
@@ -80,6 +112,14 @@
     }
 
     @media (max-width: 640px) {
+      .header .brand {
+        font-size: 24px;
+      }
+
+      .header .brand small {
+        font-size: 14px;
+      }
+
       .pagehero {
         min-height: 290px;
         padding: 42px 24px;
@@ -102,10 +142,11 @@
     }
   </style>
 </head>
+
 <body>
   <header class="header">
     <a class="brand" href="index.html">
-      <b>M</b>MULVA
+      <span>MULVA</span>
       <small>ICVGIP 2026 Workshop</small>
     </a>
 
@@ -116,22 +157,28 @@
       <a href="speakers.html">Speakers</a>
       <a class="active" href="organisers.html">Organisers</a>
       <a href="program.html">Programme</a>
-      <a href="call-for-presentations.html">Call for Presentations</a>
+      <a href="call-for-presentations.html">Call for Papers</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
   <main>
     <section class="pagehero">
-      <p class="eyebrow">MULVA 2026 · The team</p>
+      <p class="eyebrow">ICVGIP 2026 Workshop</p>
       <h1>Organising Committee</h1>
       <p>Meet the academic and industry researchers organising the workshop on machine unlearning and trustworthy AI</p>
     </section>
 
     <section class="section content">
       <div class="people">
+
         <article class="person">
-          <img src="assets/Biswajit.jpeg" alt="Biswajit Chatterjee" class="organiser-photo" loading="lazy">
+          <img
+            src="assets/Biswajit.jpeg"
+            alt="Biswajit Chatterjee"
+            class="organiser-photo"
+            loading="lazy"
+          >
           <h2>Biswajit Chatterjee</h2>
           <p class="aff">TCS Research · Primary Contact</p>
           <p>Scientist at TCS Research and PhD scholar at IIT Patna. Research interests include AI, LLMs, knowledge-augmented learning, code generation and AI systems for industrial automation</p>
@@ -140,7 +187,12 @@
         </article>
 
         <article class="person">
-          <img src="assets/Prabir.jpeg" alt="Prabir Mallick" class="organiser-photo" loading="lazy">
+          <img
+            src="assets/Prabir.jpeg"
+            alt="Prabir Mallick"
+            class="organiser-photo"
+            loading="lazy"
+          >
           <h2>Prabir Mallick</h2>
           <p class="aff">TCS Research</p>
           <p>Researcher working in AI, NLP, knowledge representation and machine learning</p>
@@ -148,7 +200,12 @@
         </article>
 
         <article class="person">
-          <img src="assets/Tirthankar.jpeg" alt="Tirthankar Dasgupta" class="organiser-photo" loading="lazy">
+          <img
+            src="assets/Tirthankar.jpeg"
+            alt="Tirthankar Dasgupta"
+            class="organiser-photo"
+            loading="lazy"
+          >
           <h2>Tirthankar Dasgupta</h2>
           <p class="aff">TCS Research</p>
           <p>Senior Scientist working in AI, machine learning, NLP, knowledge-driven systems and applied AI</p>
@@ -156,12 +213,18 @@
         </article>
 
         <article class="person">
-          <img src="assets/Sriparna.jpeg" alt="Prof. Sriparna Saha" class="organiser-photo" loading="lazy">
+          <img
+            src="assets/Sriparna.jpeg"
+            alt="Sriparna Saha"
+            class="organiser-photo"
+            loading="lazy"
+          >
           <h2>Sriparna Saha</h2>
           <p class="aff">Indian Institute of Technology Patna</p>
           <p>Associate Professor in Computer Science and Engineering. Research interests include machine learning, deep learning, pattern recognition, NLP and related AI areas</p>
           <a class="email" href="mailto:sriparna@iitp.ac.in">sriparna@iitp.ac.in</a>
         </article>
+
       </div>
     </section>
   </main>
