@@ -2,179 +2,663 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="MULVA 2026: Machine Unlearning for Language, Vision and AI — ICVGIP 2026 workshop">
-  <title>Contact | MULVA 2026</title>
+  <title>Home | MULVA 2026</title>
   <link rel="stylesheet" href="assets/style.css">
 
   <style>
-    /* Brand styling consistent with the other pages */
-    .header .brand {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: center;
-      font-size: 28px;
-      font-weight: 800;
-      line-height: 1.15;
-      text-decoration: none;
+    /* Homepage readability improvements */
+    body {
+      font-size: 17px;
     }
 
-    .header .brand small {
-      display: block;
-      margin-top: 5px;
+    .nav a {
+      font-size: 14px;
+    }
+
+    .button {
+      font-size: 15px;
+      padding: 14px 20px;
+    }
+
+    .eyebrow {
+      font-size: 12px;
+    }
+
+    .copy p,
+    .muted {
       font-size: 16px;
-      font-weight: 600;
-      line-height: 1.3;
+      line-height: 1.75;
     }
 
-    /* Full-width hero banner */
-    .pagehero {
+    .section h2 {
+      font-size: clamp(30px, 3.5vw, 42px);
+    }
+
+    .card {
+      padding: 25px;
+    }
+
+    .card h3 {
+      font-size: 19px;
+      line-height: 1.4;
+    }
+
+    .card p {
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    .cta h2 {
+      font-size: 32px;
+    }
+
+    .cta p {
+      font-size: 16px;
+    }
+
+    .email {
+      font-size: 14px;
+    }
+
+    .footer {
+      font-size: 13px;
+    }
+
+    /* Full-width photographic hero banner */
+    .hero-banner {
       position: relative;
-      isolation: isolate;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      min-height: 330px;
-      padding: 54px clamp(24px, 6vw, 88px);
+      width: 100%;
+      min-height: 520px;
+      box-sizing: border-box;
       overflow: hidden;
-      color: #fff;
-      background: #111827 url("assets/mulva-hero.png") center 48% / cover no-repeat;
+      display: flex;
+      align-items: center;
+      padding: 64px clamp(24px, 7vw, 100px);
+      background: #11172b;
+      isolation: isolate;
       border-radius: 0;
     }
 
-    .pagehero::before {
+    .hero-banner-image {
+      position: absolute;
+      inset: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      z-index: -2;
+    }
+
+    .hero-banner::after {
       content: "";
       position: absolute;
       inset: 0;
-      z-index: -1;
       background: linear-gradient(
         90deg,
-        rgba(5, 12, 28, .88) 0%,
-        rgba(5, 12, 28, .68) 48%,
-        rgba(5, 12, 28, .25) 100%
+        rgba(8, 13, 35, 0.90) 0%,
+        rgba(8, 13, 35, 0.72) 45%,
+        rgba(8, 13, 35, 0.12) 100%
       );
+      z-index: -1;
+      pointer-events: none;
     }
 
-    .pagehero .eyebrow {
-      margin: 0 0 14px;
-      color: #fff;
+    .hero-banner-overlay {
+      position: relative;
+      width: 100%;
+      max-width: 850px;
+      color: #ffffff;
+    }
+
+    .hero-banner-overlay h1 {
+      margin: 12px 0;
+      color: #ffffff;
+      font-size: clamp(48px, 7vw, 82px);
+      line-height: 1.05;
+    }
+
+    .hero-banner-overlay .subtitle {
+      font-size: clamp(22px, 3vw, 32px);
+      line-height: 1.35;
+      color: #ffffff;
+    }
+
+    .hero-banner-overlay p:not(.eyebrow):not(.subtitle) {
+      max-width: 700px;
+      font-size: 18px;
+      line-height: 1.7;
+      color: #ffffff;
+    }
+
+    .hero-banner-overlay .eyebrow {
+      color: #d4dcff;
+    }
+
+    .hero-banner-overlay .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 22px;
+      margin: 24px 0;
+    }
+
+    .hero-banner-overlay .meta span {
+      color: #ffffff;
+      font-size: 14px;
+    }
+
+    .hero-banner-overlay .button {
+      display: inline-block;
+    }
+
+    /* Research-theme cards */
+    .theme-card-icon {
+      display: inline-grid;
+      place-items: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: #eeedff;
+      color: var(--purple);
+      font-size: 25px;
+      margin-bottom: 8px;
+    }
+
+    /* Tablet layout */
+    @media (max-width: 980px) {
+      .nav a {
+        font-size: 12px;
+      }
+
+      .card {
+        padding: 20px;
+      }
+    }
+
+    /* Mobile layout */
+    @media (max-width: 740px) {
+      body {
+        font-size: 16px;
+      }
+
+      .hero-banner {
+        min-height: 540px;
+        padding: 44px 24px;
+      }
+
+      .hero-banner-image {
+        object-position: 60% center;
+      }
+
+      .hero-banner-overlay h1 {
+        font-size: clamp(44px, 12vw, 60px);
+      }
+
+      .hero-banner-overlay .subtitle {
+        font-size: 22px;
+      }
+
+      .hero-banner-overlay p:not(.eyebrow):not(.subtitle) {
+        font-size: 16px;
+      }
+
+      .hero-banner-overlay .meta {
+        gap: 10px 16px;
+      }
+
+      .copy p,
+      .muted {
+        font-size: 16px;
+      }
+
+      .card h3 {
+        font-size: 19px;
+      }
+
+      .card p {
+        font-size: 16px;
+      }
+
+      .cta h2 {
+        font-size: 28px;
+      }
+
+      .footer {
+        font-size: 12px;
+      }
+    }
+    
+/* ==========================================
+   Reference design: typography and card layout
+   ========================================== */
+
+/* Section headings */
+.section h2 {
+  font-size: clamp(29px, 3vw, 36px);
+  line-height: 1.2;
+  letter-spacing: -0.6px;
+  color: #101b43;
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+
+.section > .eyebrow,
+.section > div > .eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 1.5;
+  color: #1765ed;
+}
+
+.section > .muted {
+  font-size: 16px;
+  line-height: 1.55;
+  color: #465574;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+
+/* Shared card grid */
+.section .grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  align-items: stretch;
+}
+
+/* Workshop at a Glance cards */
+.section.wash .card {
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr);
+  grid-template-rows: auto auto;
+  column-gap: 14px;
+  align-content: center;
+  align-items: center;
+  min-width: 0;
+  min-height: 100px;
+  padding: 18px 16px;
+  background: #ffffff;
+  border: 1px solid #e3eaf6;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(28, 58, 110, 0.025);
+}
+
+.section.wash .card .num {
+  grid-column: 1;
+  grid-row: 1 / 3;
+  display: grid;
+  place-items: center;
+  width: 60px;
+  height: 60px;
+  margin: 0;
+  border-radius: 50%;
+  background: #e4eeff;
+  color: #0758e8;
+  font-size: 29px;
+  line-height: 1;
+}
+
+.section.wash .card:nth-child(2) .num {
+  background: #eee8ff;
+  color: #6637e8;
+}
+
+.section.wash .card:nth-child(3) .num {
+  background: #dff6f1;
+  color: #008c7b;
+}
+
+.section.wash .card:nth-child(4) .num {
+  background: #ffeadf;
+  color: #e84d19;
+}
+
+.section.wash .card h3 {
+  grid-column: 2;
+  grid-row: 1;
+  margin: 0 0 4px;
+  font-size: 17px;
+  line-height: 1.3;
+  color: #101b43;
+}
+
+.section.wash .card p {
+  grid-column: 2;
+  grid-row: 2;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #182747;
+}
+
+.section.wash .card p small {
+  display: block;
+  margin-top: 2px;
+  font-size: 11px;
+  line-height: 1.45;
+  color: #465574;
+}
+
+/* Research theme cards */
+.section:not(.intro):not(.wash) .grid .card {
+  display: grid;
+  grid-template-columns: 62px minmax(0, 1fr);
+  grid-template-rows: auto auto;
+  column-gap: 12px;
+  align-content: center;
+  align-items: center;
+  min-width: 0;
+  min-height: 106px;
+  padding: 14px 12px;
+  background: #ffffff;
+  border: 1px solid #e8edf5;
+  border-radius: 14px;
+  box-shadow: none;
+}
+
+.section:not(.intro):not(.wash) .theme-card-icon {
+  grid-column: 1;
+  grid-row: 1 / 3;
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  margin: 0;
+  border-radius: 50%;
+  font-size: 27px;
+  line-height: 1;
+  background: #e4eeff;
+  color: #0758e8;
+}
+
+.section:not(.intro):not(.wash) .grid .card:nth-child(2) .theme-card-icon {
+  background: #eee8ff;
+  color: #6637e8;
+}
+
+.section:not(.intro):not(.wash) .grid .card:nth-child(3) .theme-card-icon {
+  background: #dff6f1;
+  color: #008c7b;
+}
+
+.section:not(.intro):not(.wash) .grid .card:nth-child(4) .theme-card-icon {
+  background: #ffeadf;
+  color: #e84d19;
+}
+
+.section:not(.intro):not(.wash) .grid .card h3 {
+  grid-column: 2;
+  grid-row: 1;
+  align-self: end;
+  margin: 0 0 4px;
+  font-size: 14px;
+  line-height: 1.35;
+  color: #101b43;
+}
+
+.section:not(.intro):not(.wash) .grid .card p {
+  grid-column: 2;
+  grid-row: 2;
+  align-self: start;
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #465574;
+}
+
+/* About section typography */
+.section.intro .copy p {
+  font-size: 15px;
+  line-height: 1.55;
+  color: #182747;
+  margin-bottom: 8px;
+}
+
+/* Bottom call-to-action */
+.cta {
+  border-radius: 10px;
+}
+
+.cta h2 {
+  font-size: clamp(25px, 3vw, 30px);
+  line-height: 1.25;
+}
+
+.cta p {
+  line-height: 1.5;
+}
+
+/* Tablet */
+@media (max-width: 980px) {
+  .section .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .section.wash .card,
+  .section:not(.intro):not(.wash) .grid .card {
+    min-height: 100px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 560px) {
+  .section .grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .section.wash .card {
+    grid-template-columns: 60px minmax(0, 1fr);
+    padding: 16px;
+  }
+
+  .section:not(.intro):not(.wash) .grid .card {
+    grid-template-columns: 60px minmax(0, 1fr);
+    padding: 15px;
+  }
+
+  .section.wash .card .num,
+  .section:not(.intro):not(.wash) .theme-card-icon {
+    width: 54px;
+    height: 54px;
+  }
+
+  .section.wash .card h3 {
+    font-size: 17px;
+  }
+
+  .section.wash .card p {
+    font-size: 14px;
+  }
+
+  .section:not(.intro):not(.wash) .grid .card h3 {
+    font-size: 15px;
+  }
+
+  .section:not(.intro):not(.wash) .grid .card p {
+    font-size: 13px;
+  }
+}
+
+    /* Slightly larger section labels and topic link */
+    .hero-banner-overlay > .eyebrow {
       font-size: 15px;
+      letter-spacing: 3.2px;
       font-weight: 700;
+    }
+
+    .section > .eyebrow,
+    .section > div > .eyebrow {
+      font-size: 15px;
       letter-spacing: 2.8px;
-      text-transform: uppercase;
+      font-weight: 700;
     }
 
-    .pagehero h1 {
-      max-width: 900px;
-      margin: 0 0 14px;
-      color: #fff;
-      font-size: clamp(42px, 6vw, 68px);
-      line-height: 1.08;
+    .section.intro .eyebrow,
+    .section.wash > .eyebrow,
+    .section:not(.intro):not(.wash) > .eyebrow {
+      font-size: 15px;
     }
 
-    .pagehero > p:last-child {
-      max-width: 760px;
-      margin: 0;
-      color: rgba(255, 255, 255, .94);
-      font-size: clamp(17px, 2vw, 21px);
-      line-height: 1.55;
+    .section > p > a.email {
+      display: inline-block;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1.5;
     }
 
-    .contact .card {
-      height: 100%;
-    }
-
-    .contact .card h2 {
-      margin-top: .2rem;
-    }
-
-    .contact .card a {
-      overflow-wrap: anywhere;
-    }
-
-    @media (max-width: 640px) {
-      .header .brand {
-        font-size: 24px;
-      }
-
-      .header .brand small {
-        font-size: 14px;
-      }
-
-      .pagehero {
-        min-height: 290px;
-        padding: 42px 24px;
-        background-position: center center;
-      }
-
-      .pagehero::before {
-        background: linear-gradient(
-          90deg,
-          rgba(5, 12, 28, .88),
-          rgba(5, 12, 28, .58)
-        );
-      }
-
-      .pagehero .eyebrow {
+    @media (max-width: 740px) {
+      .hero-banner-overlay > .eyebrow,
+      .section > .eyebrow,
+      .section > div > .eyebrow {
         font-size: 13px;
-        letter-spacing: 2px;
+        letter-spacing: 2.2px;
       }
 
-      .pagehero h1 {
-        font-size: clamp(38px, 10vw, 48px);
+      .section > p > a.email {
+        font-size: 17px;
       }
     }
+
   </style>
 </head>
 
 <body>
   <header class="header">
     <a class="brand" href="index.html">
-      <span>MULVA</span>
+      MULVA
       <small>ICVGIP 2026 Workshop</small>
     </a>
 
-    <button class="toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <button
+      class="toggle"
+      aria-label="Toggle navigation"
+      aria-expanded="false"
+    >☰</button>
 
     <nav class="nav">
-      <a href="index.html">Home</a>
+      <a class="active" href="index.html">Home</a>
       <a href="speakers.html">Speakers</a>
       <a href="organisers.html">Organisers</a>
       <a href="program.html">Programme</a>
-      <a href="call-for-presentations.html">Call for Papers</a>
-      <a class="active" href="contact.html">Contact</a>
+      <a href="call-for-presentations.html">Call for Presentations</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
   <main>
-    <section class="pagehero">
-      <p class="eyebrow">ICVGIP 2026 Workshop</p>
-      <h1>Contact</h1>
-      <p>For enquiries about MULVA 2026, contact the workshop primary contact</p>
+    <!-- Full-width hero banner -->
+    <section class="hero-banner">
+      <img
+        src="assets/mulva-hero.png"
+        alt="AI neural network and machine unlearning visual against a Kolkata riverside sunset"
+        class="hero-banner-image"
+      >
+
+      <div class="hero-banner-overlay">
+        <p class="eyebrow">ICVGIP 2026 Workshop</p>
+        <h1>MULVA 2026</h1>
+        <p class="subtitle">Machine Unlearning for Language, Vision and AI</p>
+        <p>How can AI systems forget specified information while preserving the knowledge and capabilities that should remain?</p>
+
+        <div class="meta">
+          <span>▦ &nbsp;21 December 2026</span>
+          <span>◷ &nbsp;Half-day workshop</span>
+          <span>⌖ &nbsp;ICVGIP 2026 · Kolkata, India</span>
+        </div>
+
+        <a class="button" href="call-for-presentations.html">Explore Workshop Themes →</a>
+      </div>
     </section>
 
-    <section class="section content contact">
-      <article class="card">
-        <p class="eyebrow">Primary Contact</p>
-        <h2>Biswajit Chatterjee</h2>
-        <p class="aff">TCS Research</p>
+    <section class="section intro">
+      <div>
+        <p class="eyebrow">About the workshop</p>
+        <h2>Making forgetting a first-class capability of AI</h2>
+      </div>
 
-        <p>
-          <a href="mailto:chatterjee.biswajit1@tcs.com">chatterjee.biswajit1@tcs.com</a>
-        </p>
+      <div class="copy">
+        <p>Machine unlearning seeks to remove the influence of designated data, concepts, identities or knowledge from trained models while preserving their broader utility</p>
+        <p>The need spans privacy and data-removal requirements, copyright concerns, model correction, safety, bias mitigation and responsible AI deployment</p>
+        <p>MULVA brings together researchers and practitioners working across computer vision, natural language processing, multimodal learning, generative AI and foundation models to discuss methods, evaluation, verification and real-world challenges</p>
+      </div>
+    </section>
 
-        <p>
-          <a href="mailto:b.chatterjee007@gmail.com">b.chatterjee007@gmail.com</a>
-        </p>
-      </article>
+    <section class="section wash">
+      <p class="eyebrow">Workshop at a glance</p>
 
-      <article class="card">
-        <h2>About MULVA</h2>
-        <p><b>MULVA:</b> Machine Unlearning for Language, Vision and AI</p>
-        <p>Half-day workshop at ICVGIP 2026</p>
-        <p>Workshop date: 21 December 2026</p>
-      </article>
+      <div class="grid">
+        <article class="card">
+          <span class="num">▦</span>
+          <h3>Date</h3>
+          <p>21 December 2026</p>
+        </article>
+
+        <article class="card">
+          <span class="num">◷</span>
+          <h3>Format</h3>
+          <p>Half-day<br><small>Talks, presentations and discussion</small></p>
+        </article>
+
+        <article class="card">
+          <span class="num">⌘</span>
+          <h3>Research scope</h3>
+          <p>Vision · Language · Multimodal AI</p>
+        </article>
+
+        <article class="card">
+          <span class="num">◎</span>
+          <h3>Audience</h3>
+          <p>Academic and industry researchers</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="eyebrow">Research themes</p>
+      <h2>From forgetting algorithms to trustworthy deployment</h2>
+      <p class="muted">The workshop welcomes theoretical, methodological, empirical, systems, benchmarking and application-oriented contributions</p>
+
+      <div class="grid">
+        <article class="card">
+          <span class="theme-card-icon" aria-hidden="true">⚙</span>
+          <h3>Foundations &amp; methods</h3>
+          <p>Exact, approximate, certified and parameter-efficient unlearning; formulations and guarantees</p>
+        </article>
+
+        <article class="card">
+          <span class="theme-card-icon" aria-hidden="true">◈</span>
+          <h3>Vision, language &amp; multimodal</h3>
+          <p>Unlearning in computer vision, NLP, LLMs, vision-language systems and foundation models</p>
+        </article>
+
+        <article class="card">
+          <span class="theme-card-icon" aria-hidden="true">▥</span>
+          <h3>Evaluation &amp; verification</h3>
+          <p>Benchmarks, metrics, attack-based evaluation and forgetting–retention trade-offs</p>
+        </article>
+
+        <article class="card">
+          <span class="theme-card-icon" aria-hidden="true">⬡</span>
+          <h3>Privacy &amp; responsible AI</h3>
+          <p>Privacy leakage, copyright, safety, fairness and responsible deployment</p>
+        </article>
+      </div>
+
+      <p><a class="email" href="call-for-presentations.html">View all topics of interest →</a></p>
+    </section>
+
+    <section class="cta">
+      <div>
+        <p class="eyebrow">Join the conversation</p>
+        <h2>Can we really make AI forget?</h2>
+        <p class="muted">Explore open challenges in reliable, efficient and verifiable machine unlearning</p>
+      </div>
+
+      <a class="button darkbutton" href="program.html">View Workshop Programme →</a>
     </section>
   </main>
 
