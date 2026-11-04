@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -18,7 +19,6 @@
       --cfp-surface: #f6f8fd;
     }
 
-    /* Consistent workshop branding */
     .header .brand {
       display: flex;
       flex-direction: column;
@@ -38,18 +38,16 @@
       line-height: 1.3;
     }
 
-    /* Hero banner */
     .cfp-hero {
       position: relative;
       isolation: isolate;
       display: flex;
       align-items: center;
-      min-height: 440px;
+      min-height: 420px;
       padding: 65px clamp(24px, 7vw, 105px);
       overflow: hidden;
       color: #fff;
-      background: #10172d url("assets/mulva-hero.png")
-        center 48% / cover no-repeat;
+      background: #10172d url("assets/mulva-hero.png") center 48% / cover no-repeat;
     }
 
     .cfp-hero::before {
@@ -57,13 +55,12 @@
       position: absolute;
       inset: 0;
       z-index: -1;
-      background:
-        linear-gradient(
-          100deg,
-          rgba(8, 15, 37, .96) 0%,
-          rgba(13, 23, 54, .87) 48%,
-          rgba(19, 31, 67, .43) 100%
-        );
+      background: linear-gradient(
+        100deg,
+        rgba(8, 15, 37, .96) 0%,
+        rgba(13, 23, 54, .87) 48%,
+        rgba(19, 31, 67, .43) 100%
+      );
     }
 
     .cfp-hero-inner {
@@ -81,13 +78,11 @@
       font-size: 13px;
       font-weight: 750;
       letter-spacing: 3px;
-      line-height: 1.5;
       text-transform: uppercase;
     }
 
     .cfp-kicker::before {
       content: "";
-      display: inline-block;
       width: 32px;
       height: 3px;
       border-radius: 3px;
@@ -104,9 +99,7 @@
       letter-spacing: -1.8px;
     }
 
-    .cfp-hero h1 span {
-      color: #b9c7ff;
-    }
+    .cfp-hero h1 span { color: #b9c7ff; }
 
     .cfp-hero-description {
       max-width: 760px;
@@ -126,21 +119,18 @@
     .cfp-meta-pill {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
       padding: 10px 15px;
-      border: 1px solid rgba(255, 255, 255, .24);
+      border: 1px solid rgba(255,255,255,.24);
       border-radius: 30px;
-      background: rgba(255, 255, 255, .09);
+      background: rgba(255,255,255,.09);
       color: #fff;
       font-size: 13px;
       font-weight: 600;
-      line-height: 1.4;
       backdrop-filter: blur(8px);
     }
 
-    /* Shared section layout */
     .cfp-section {
-      padding: 76px clamp(22px, 6vw, 84px);
+      padding: 72px clamp(22px, 6vw, 84px);
     }
 
     .cfp-container {
@@ -161,7 +151,6 @@
       font-size: 12px;
       font-weight: 800;
       letter-spacing: 3px;
-      line-height: 1.6;
       text-transform: uppercase;
     }
 
@@ -171,7 +160,6 @@
       font-size: clamp(29px, 3.5vw, 42px);
       font-weight: 800;
       line-height: 1.2;
-      letter-spacing: -.8px;
     }
 
     .cfp-section-heading > p:last-child {
@@ -181,147 +169,174 @@
       line-height: 1.8;
     }
 
-    /* Submission information */
+    /* Submission callout */
+
     .cfp-submission {
       padding-top: 48px;
-      padding-bottom: 40px;
+      padding-bottom: 48px;
       background: #fff;
     }
 
     .cfp-submission-panel {
-      position: relative;
       display: grid;
-      grid-template-columns: 66px minmax(0, 1fr);
+      grid-template-columns: 65px minmax(0,1fr);
       gap: 22px;
       align-items: start;
-      padding: 30px 34px;
-      overflow: hidden;
+      padding: 32px;
       border: 1px solid #dfe5ff;
       border-radius: 20px;
-      background:
-        linear-gradient(120deg, #f1f4ff 0%, #faf9ff 100%);
-      box-shadow: 0 10px 32px rgba(35, 59, 125, .06);
-    }
-
-    .cfp-submission-panel::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      width: 5px;
-      background: linear-gradient(
-        180deg,
-        var(--cfp-blue),
-        var(--cfp-purple)
-      );
+      background: linear-gradient(120deg,#f1f4ff,#faf9ff);
+      box-shadow: 0 10px 32px rgba(35,59,125,.06);
     }
 
     .cfp-submission-icon {
       display: grid;
       place-items: center;
-      width: 62px;
-      height: 62px;
-      border-radius: 18px;
+      width: 60px;
+      height: 60px;
+      border-radius: 17px;
       background: #e1e8ff;
       color: var(--cfp-blue);
-      font-size: 29px;
-      font-weight: 700;
+      font-size: 28px;
     }
 
     .cfp-submission-panel h2 {
       margin: 0 0 10px;
       color: var(--cfp-navy);
-      font-size: 23px;
-      font-weight: 800;
-      line-height: 1.35;
+      font-size: 24px;
     }
 
     .cfp-submission-panel p {
-      max-width: 850px;
       margin: 0;
       color: #465574;
       font-size: 15px;
       line-height: 1.8;
     }
 
-    .cfp-submission-note {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 7px 12px;
-      border: 1px solid #d9e2ff;
-      border-radius: 7px;
-      background: rgba(255, 255, 255, .75);
-      color: #354d9b;
-      font-size: 12px;
-      font-weight: 700;
-      line-height: 1.5;
+    .cfp-submit-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+      padding: 13px 22px;
+      border-radius: 9px;
+      background: var(--cfp-blue);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 750;
+      text-decoration: none;
+      box-shadow: 0 6px 15px rgba(40,88,232,.2);
+      transition: transform .2s ease, background .2s ease;
     }
 
-    /* Topics section */
+    .cfp-submit-button:hover {
+      transform: translateY(-2px);
+      background: #1945c7;
+    }
+
+    /* General information cards */
+
+    .cfp-info-section { background: var(--cfp-surface); }
+
+    .cfp-info-grid {
+      display: grid;
+      grid-template-columns: repeat(2,minmax(0,1fr));
+      gap: 18px;
+    }
+
+    .cfp-info-card {
+      padding: 26px;
+      border: 1px solid var(--cfp-border);
+      border-radius: 16px;
+      background: #fff;
+    }
+
+    .cfp-info-card h3 {
+      margin: 0 0 13px;
+      color: var(--cfp-navy);
+      font-size: 18px;
+      line-height: 1.45;
+    }
+
+    .cfp-info-card p,
+    .cfp-info-card li {
+      color: var(--cfp-muted);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .cfp-info-card p { margin: 0; }
+
+    .cfp-info-card ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .cfp-info-card li { margin-bottom: 7px; }
+
+    .cfp-info-card a {
+      color: var(--cfp-blue);
+      font-weight: 650;
+      text-decoration: none;
+    }
+
+    .cfp-info-card a:hover { text-decoration: underline; }
+
+    /* Topics */
+
     .cfp-topics-section {
-      padding-top: 48px;
-      background: var(--cfp-surface);
+      padding-top: 65px;
+      background: #fff;
     }
 
     .cfp-topics-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: repeat(2,minmax(0,1fr));
       gap: 17px;
     }
 
     .cfp-topic-card {
-      position: relative;
       display: grid;
-      grid-template-columns: 54px minmax(0, 1fr);
-      gap: 17px;
+      grid-template-columns: 48px minmax(0,1fr);
+      gap: 16px;
       align-items: start;
       min-width: 0;
-      padding: 23px 24px;
+      padding: 23px;
       border: 1px solid var(--cfp-border);
       border-radius: 17px;
       background: #fff;
-      box-shadow: 0 3px 12px rgba(27, 47, 92, .025);
-      transition:
-        transform .22s ease,
-        box-shadow .22s ease,
-        border-color .22s ease;
+      transition: transform .22s ease, box-shadow .22s ease;
     }
 
     .cfp-topic-card:hover {
       transform: translateY(-4px);
-      border-color: #c8d3ff;
-      box-shadow: 0 12px 28px rgba(36, 66, 140, .09);
+      box-shadow: 0 12px 28px rgba(36,66,140,.09);
     }
 
     .cfp-topic-number {
       display: grid;
       place-items: center;
-      width: 48px;
-      height: 48px;
-      border: 1px solid #dce5ff;
-      border-radius: 14px;
+      width: 46px;
+      height: 46px;
+      border-radius: 13px;
       background: #edf2ff;
       color: #2858e8;
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 850;
-      line-height: 1;
     }
 
-    .cfp-topic-card:nth-child(4n + 2) .cfp-topic-number {
-      border-color: #e4dcff;
+    .cfp-topic-card:nth-child(4n+2) .cfp-topic-number {
       background: #f2edff;
       color: #7047d8;
     }
 
-    .cfp-topic-card:nth-child(4n + 3) .cfp-topic-number {
-      border-color: #d3f0e8;
+    .cfp-topic-card:nth-child(4n+3) .cfp-topic-number {
       background: #e8f8f3;
       color: #087e70;
     }
 
-    .cfp-topic-card:nth-child(4n + 4) .cfp-topic-number {
-      border-color: #ffe1d2;
+    .cfp-topic-card:nth-child(4n+4) .cfp-topic-number {
       background: #fff0e8;
       color: #c45125;
     }
@@ -331,41 +346,37 @@
       color: var(--cfp-navy);
       font-size: 16px;
       font-weight: 750;
-      line-height: 1.55;
+      line-height: 1.5;
     }
 
     .cfp-topic-card p {
       margin: 0;
       color: var(--cfp-muted);
       font-size: 13px;
-      line-height: 1.65;
+      line-height: 1.7;
     }
 
     /* Contribution types */
-    .cfp-contributions-section {
-      background: #fff;
-    }
+
+    .cfp-contributions-section { background: var(--cfp-surface); }
 
     .cfp-contributions-grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(3,minmax(0,1fr));
       gap: 18px;
     }
 
     .cfp-contribution-card {
-      min-width: 0;
-      padding: 27px 24px;
+      padding: 26px 24px;
       border: 1px solid var(--cfp-border);
       border-radius: 17px;
       background: #fff;
-      transition:
-        transform .22s ease,
-        box-shadow .22s ease;
+      transition: transform .22s ease, box-shadow .22s ease;
     }
 
     .cfp-contribution-card:hover {
       transform: translateY(-3px);
-      box-shadow: 0 12px 28px rgba(36, 66, 140, .08);
+      box-shadow: 0 12px 28px rgba(36,66,140,.08);
     }
 
     .cfp-contribution-icon {
@@ -373,22 +384,19 @@
       place-items: center;
       width: 48px;
       height: 48px;
-      margin-bottom: 19px;
+      margin-bottom: 17px;
       border-radius: 14px;
       background: #edf2ff;
       color: var(--cfp-blue);
       font-size: 23px;
-      font-weight: 700;
     }
 
-    .cfp-contribution-card:nth-child(3n + 2)
-    .cfp-contribution-icon {
+    .cfp-contribution-card:nth-child(3n+2) .cfp-contribution-icon {
       background: #f1ecff;
       color: #7047d8;
     }
 
-    .cfp-contribution-card:nth-child(3n + 3)
-    .cfp-contribution-icon {
+    .cfp-contribution-card:nth-child(3n+3) .cfp-contribution-icon {
       background: #e8f8f3;
       color: #087e70;
     }
@@ -397,7 +405,6 @@
       margin: 0 0 9px;
       color: var(--cfp-navy);
       font-size: 17px;
-      font-weight: 750;
       line-height: 1.45;
     }
 
@@ -408,55 +415,32 @@
       line-height: 1.7;
     }
 
-    /* Bottom call to action */
+    /* Bottom CTA */
+
     .cfp-bottom {
-      padding: 0 clamp(22px, 6vw, 84px) 76px;
-      background: #fff;
+      padding: 0 clamp(22px,6vw,84px) 76px;
+      background: var(--cfp-surface);
     }
 
     .cfp-bottom-panel {
-      position: relative;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 28px;
       padding: 36px 40px;
-      overflow: hidden;
       border-radius: 22px;
-      background: linear-gradient(115deg, #111b43 0%, #273c83 100%);
-      box-shadow: 0 16px 38px rgba(25, 41, 94, .14);
+      background: linear-gradient(115deg,#111b43,#273c83);
+      box-shadow: 0 16px 38px rgba(25,41,94,.14);
     }
 
-    .cfp-bottom-panel::after {
-      content: "";
-      position: absolute;
-      top: -100px;
-      right: 10%;
-      width: 270px;
-      height: 270px;
-      border: 1px solid rgba(255, 255, 255, .12);
-      border-radius: 50%;
-      box-shadow:
-        0 0 0 35px rgba(255, 255, 255, .035),
-        0 0 0 70px rgba(255, 255, 255, .025);
-      pointer-events: none;
-    }
+    .cfp-bottom-copy { max-width: 700px; }
 
-    .cfp-bottom-copy {
-      position: relative;
-      z-index: 1;
-      max-width: 700px;
-    }
-
-    .cfp-bottom-copy .cfp-eyebrow {
-      color: #c5d1ff;
-    }
+    .cfp-bottom-copy .cfp-eyebrow { color: #c5d1ff; }
 
     .cfp-bottom-copy h2 {
       margin: 0 0 10px;
       color: #fff;
-      font-size: clamp(25px, 3vw, 34px);
-      font-weight: 800;
+      font-size: clamp(25px,3vw,34px);
       line-height: 1.25;
     }
 
@@ -468,21 +452,18 @@
     }
 
     .cfp-back-home {
-      position: relative;
-      z-index: 1;
       display: inline-flex;
       flex-shrink: 0;
       align-items: center;
       justify-content: center;
       gap: 9px;
       padding: 14px 20px;
-      border: 1px solid rgba(255, 255, 255, .65);
+      border: 1px solid rgba(255,255,255,.65);
       border-radius: 10px;
       background: #fff;
       color: #17244e;
       font-size: 14px;
       font-weight: 750;
-      line-height: 1.4;
       text-decoration: none;
       transition: background .2s ease, transform .2s ease;
     }
@@ -492,37 +473,15 @@
       background: #edf1ff;
     }
 
-    /* Responsive layouts */
     @media (max-width: 980px) {
-      .cfp-topics-grid {
-        gap: 13px;
-      }
-
-      .cfp-topic-card {
-        padding: 20px;
-        grid-template-columns: 46px minmax(0, 1fr);
-        gap: 13px;
-      }
-
-      .cfp-topic-number {
-        width: 44px;
-        height: 44px;
-        border-radius: 12px;
-      }
-
       .cfp-contributions-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(2,minmax(0,1fr));
       }
     }
 
     @media (max-width: 640px) {
-      .header .brand {
-        font-size: 24px;
-      }
-
-      .header .brand small {
-        font-size: 14px;
-      }
+      .header .brand { font-size: 24px; }
+      .header .brand small { font-size: 14px; }
 
       .cfp-hero {
         min-height: 390px;
@@ -533,8 +492,8 @@
       .cfp-hero::before {
         background: linear-gradient(
           100deg,
-          rgba(8, 15, 37, .94),
-          rgba(13, 23, 54, .76)
+          rgba(8,15,37,.94),
+          rgba(13,23,54,.76)
         );
       }
 
@@ -544,7 +503,7 @@
       }
 
       .cfp-hero h1 {
-        font-size: clamp(40px, 11vw, 56px);
+        font-size: clamp(40px,11vw,56px);
         letter-spacing: -1px;
       }
 
@@ -553,84 +512,42 @@
         line-height: 1.7;
       }
 
-      .cfp-hero-meta {
-        gap: 9px;
-        margin-top: 23px;
-      }
-
       .cfp-meta-pill {
         padding: 8px 12px;
         font-size: 12px;
       }
 
-      .cfp-section {
-        padding: 54px 20px;
-      }
+      .cfp-section { padding: 52px 20px; }
 
       .cfp-submission {
         padding-top: 30px;
-        padding-bottom: 24px;
+        padding-bottom: 30px;
       }
 
       .cfp-submission-panel {
         grid-template-columns: 1fr;
         gap: 16px;
-        padding: 25px 22px;
+        padding: 24px 21px;
       }
 
-      .cfp-submission-icon {
-        width: 52px;
-        height: 52px;
-        border-radius: 15px;
-        font-size: 25px;
-      }
-
-      .cfp-submission-panel h2 {
-        font-size: 21px;
-      }
-
-      .cfp-topics-section {
-        padding-top: 38px;
-      }
-
-      .cfp-section-heading {
-        margin-bottom: 28px;
-      }
-
-      .cfp-section-heading h2 {
-        font-size: 30px;
-      }
-
+      .cfp-info-grid,
       .cfp-topics-grid,
       .cfp-contributions-grid {
         grid-template-columns: 1fr;
       }
 
       .cfp-topic-card {
-        grid-template-columns: 46px minmax(0, 1fr);
-        gap: 14px;
+        grid-template-columns: 44px minmax(0,1fr);
+        gap: 13px;
         padding: 19px;
       }
 
-      .cfp-topic-card h3 {
-        font-size: 15px;
+      .cfp-topic-number {
+        width: 43px;
+        height: 43px;
       }
 
-      .cfp-topic-card p {
-        font-size: 13px;
-      }
-
-      .cfp-contribution-card {
-        padding: 23px;
-      }
-
-      .cfp-contribution-icon {
-        margin-bottom: 14px;
-      }
-
-      .cfp-bottom {
-        padding: 0 20px 54px;
-      }
+      .cfp-bottom { padding: 0 20px 54px; }
 
       .cfp-bottom-panel {
         align-items: flex-start;
@@ -648,13 +565,15 @@
     @media (prefers-reduced-motion: reduce) {
       .cfp-topic-card,
       .cfp-contribution-card,
-      .cfp-back-home {
+      .cfp-back-home,
+      .cfp-submit-button {
         transition: none;
       }
 
       .cfp-topic-card:hover,
       .cfp-contribution-card:hover,
-      .cfp-back-home:hover {
+      .cfp-back-home:hover,
+      .cfp-submit-button:hover {
         transform: none;
       }
     }
@@ -662,6 +581,7 @@
 </head>
 
 <body>
+
   <header class="header">
     <a class="brand" href="index.html">
       <span>MULVA</span>
@@ -686,74 +606,147 @@
 
   <main>
 
-    <!-- Hero banner -->
+    <!-- Hero -->
     <section class="cfp-hero">
       <div class="cfp-hero-inner">
-        <p class="cfp-kicker">ICVGIP 2026 · Workshop</p>
+        <p class="cfp-kicker">ICVGIP 2026 · Workshop III</p>
 
-        <h1>
-          Call for <span>Papers</span>
-        </h1>
+        <h1>Call for <span>Papers</span></h1>
 
         <p class="cfp-hero-description">
-          MULVA invites researchers and practitioners to explore how AI
-          systems can forget specified information while retaining the
-          knowledge, capabilities and reliability that matter
+          MULVA invites researchers, academicians and practitioners
+          to contribute to the growing field of machine unlearning
+          and explore how AI systems can forget specified information
+          while retaining their essential knowledge, capabilities
+          and reliability
         </p>
 
         <div class="cfp-hero-meta">
-          <span class="cfp-meta-pill">
-            ◷ &nbsp;21 December 2026
-          </span>
-
-          <span class="cfp-meta-pill">
-            ◈ &nbsp;Kolkata, India
-          </span>
-
-          <span class="cfp-meta-pill">
-            ◎ &nbsp;Machine Unlearning
-          </span>
+          <span class="cfp-meta-pill">◷ &nbsp;21 December 2026</span>
+          <span class="cfp-meta-pill">◈ &nbsp;Kolkata, India</span>
+          <span class="cfp-meta-pill">◎ &nbsp;Half-Day Workshop</span>
         </div>
       </div>
     </section>
 
-    <!-- Submission information -->
+    <!-- Submission portal -->
     <section class="cfp-section cfp-submission">
       <div class="cfp-container">
         <div class="cfp-submission-panel">
           <div class="cfp-submission-icon" aria-hidden="true">✉</div>
 
           <div>
-            <h2>Submission Information</h2>
+            <h2>Submit Your Paper</h2>
 
             <p>
-              Submission deadlines, paper formats, publication arrangements
-              and submission links will be announced in accordance with
-              ICVGIP 2026 policies. Please revisit this page for the
-              latest confirmed information
+              Authors are invited to submit their research contributions
+              through the MULVA 2026 submission portal on OpenReview.
+              Please consult the submission portal for the applicable
+              submission instructions and any workshop-specific updates
             </p>
 
-            <span class="cfp-submission-note">
-              Submission details will be updated when confirmed
-            </span>
+            <a
+              class="cfp-submit-button"
+              href="https://openreview.net/group?id=ICVGIP.in/2026/Workshop/MULVA"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Submit via OpenReview
+              <span aria-hidden="true">↗</span>
+            </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Topics of interest -->
+    <!-- About and submission guidelines -->
+    <section class="cfp-section cfp-info-section">
+      <div class="cfp-container">
+
+        <div class="cfp-section-heading">
+          <p class="cfp-eyebrow">Submission Guidelines</p>
+          <h2>Preparing Your Submission</h2>
+          <p>
+            Please review the following guidance before submitting
+            your manuscript to the MULVA 2026 workshop
+          </p>
+        </div>
+
+        <div class="cfp-info-grid">
+
+          <article class="cfp-info-card">
+            <h3>Paper Format and Length</h3>
+            <ul>
+              <li>Manuscripts should be submitted in PDF format</li>
+              <li>The main manuscript should not exceed 8 pages, including text, figures and tables</li>
+              <li>References may extend beyond the 8-page limit</li>
+              <li>The maximum PDF file size is 20 MB</li>
+              <li>Authors are encouraged to use the official ICVGIP 2026 paper template</li>
+            </ul>
+          </article>
+
+          <article class="cfp-info-card">
+            <h3>Double-Blind Review</h3>
+            <ul>
+              <li>Submissions must follow the double-blind review policy</li>
+              <li>Author names and affiliations must not appear in the manuscript</li>
+              <li>Acknowledgements and other identifying information should be omitted</li>
+              <li>References to prior work should not reveal the authors' identities</li>
+            </ul>
+          </article>
+
+          <article class="cfp-info-card">
+            <h3>Originality and Submission Policy</h3>
+            <ul>
+              <li>Submitted manuscripts should represent original research contributions</li>
+              <li>Submissions must comply with the applicable ICVGIP originality and concurrent-submission policies</li>
+              <li>Authors should ensure that their manuscripts do not violate publication or copyright policies</li>
+              <li>Please consult the official conference guidelines for the complete policy</li>
+            </ul>
+          </article>
+
+          <article class="cfp-info-card">
+            <h3>Supplementary Material</h3>
+            <ul>
+              <li>Supplementary material may be provided where it supports the submitted work</li>
+              <li>Examples include additional experiments, proofs, results, code and datasets</li>
+              <li>Supplementary material should not contain identifying information during double-blind review</li>
+              <li>Authors should follow the file and upload requirements specified by OpenReview</li>
+            </ul>
+          </article>
+
+        </div>
+
+        <div style="text-align:center; margin-top:28px">
+          <p style="color:#60708c; font-size:14px; line-height:1.8">
+            For the complete author instructions and official paper template,
+            please visit the
+            <a
+              href="https://icvgip.in/2026/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style="color:#2858e8; font-weight:700"
+            >ICVGIP 2026 website</a>.
+            Please check the MULVA OpenReview page for workshop-specific
+            submission requirements
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Topics -->
     <section class="cfp-section cfp-topics-section">
       <div class="cfp-container">
 
         <div class="cfp-section-heading">
-          <p class="cfp-eyebrow">Explore the research landscape</p>
-
+          <p class="cfp-eyebrow">Explore the Research Landscape</p>
           <h2>Topics of Interest</h2>
-
           <p>
             We welcome research spanning the theory, algorithms,
             evaluation and practical deployment of machine unlearning
-            across language, vision and multimodal AI
+            across language, vision and multimodal AI. Topics include,
+            but are not limited to, the following
           </p>
         </div>
 
@@ -763,10 +756,7 @@
             <span class="cfp-topic-number">01</span>
             <div>
               <h3>Foundations and Theoretical Guarantees</h3>
-              <p>
-                Foundations, formulations and theoretical guarantees
-                of machine unlearning
-              </p>
+              <p>Foundations, formulations and theoretical guarantees of machine unlearning</p>
             </div>
           </article>
 
@@ -774,10 +764,7 @@
             <span class="cfp-topic-number">02</span>
             <div>
               <h3>Unlearning Methods and Algorithms</h3>
-              <p>
-                Exact, approximate, certified and parameter-efficient
-                unlearning methods
-              </p>
+              <p>Exact, approximate, certified and parameter-efficient unlearning methods</p>
             </div>
           </article>
 
@@ -785,10 +772,7 @@
             <span class="cfp-topic-number">03</span>
             <div>
               <h3>Granularity of Forgetting</h3>
-              <p>
-                Data-, instance-, class-, concept-, identity- and
-                knowledge-level unlearning
-              </p>
+              <p>Data-, instance-, class-, concept-, identity- and knowledge-level unlearning</p>
             </div>
           </article>
 
@@ -796,10 +780,7 @@
             <span class="cfp-topic-number">04</span>
             <div>
               <h3>Vision and Language Models</h3>
-              <p>
-                Unlearning in computer vision, NLP, LLMs and
-                visual foundation models
-              </p>
+              <p>Unlearning in computer vision, NLP, LLMs and visual foundation models</p>
             </div>
           </article>
 
@@ -807,10 +788,7 @@
             <span class="cfp-topic-number">05</span>
             <div>
               <h3>Multimodal and Generative AI</h3>
-              <p>
-                Unlearning in multimodal, vision-language,
-                generative and foundation models
-              </p>
+              <p>Unlearning in multimodal, vision-language, generative and foundation models</p>
             </div>
           </article>
 
@@ -818,10 +796,7 @@
             <span class="cfp-topic-number">06</span>
             <div>
               <h3>Model Editing and Knowledge Removal</h3>
-              <p>
-                Model editing, knowledge removal and their
-                relationship to machine unlearning
-              </p>
+              <p>Model editing, knowledge removal and their relationship to machine unlearning</p>
             </div>
           </article>
 
@@ -829,10 +804,7 @@
             <span class="cfp-topic-number">07</span>
             <div>
               <h3>Scalable and Continual Unlearning</h3>
-              <p>
-                Efficient, scalable, federated, distributed
-                and continual unlearning
-              </p>
+              <p>Efficient, scalable, federated, distributed and continual unlearning</p>
             </div>
           </article>
 
@@ -840,10 +812,7 @@
             <span class="cfp-topic-number">08</span>
             <div>
               <h3>Privacy and Responsible AI</h3>
-              <p>
-                Privacy, copyright, data deletion, safety,
-                fairness and responsible AI
-              </p>
+              <p>Privacy, copyright, data deletion, safety, fairness and responsible AI</p>
             </div>
           </article>
 
@@ -851,10 +820,7 @@
             <span class="cfp-topic-number">09</span>
             <div>
               <h3>Security and Verification</h3>
-              <p>
-                Adversarial attacks, membership inference,
-                privacy leakage and verification of forgetting
-              </p>
+              <p>Adversarial attacks, membership inference, privacy leakage and verification of forgetting</p>
             </div>
           </article>
 
@@ -862,10 +828,7 @@
             <span class="cfp-topic-number">10</span>
             <div>
               <h3>Evaluation and Benchmarking</h3>
-              <p>
-                Evaluation metrics, benchmarks, datasets and
-                forgetting–retention trade-offs
-              </p>
+              <p>Evaluation metrics, benchmarks, datasets and forgetting–retention trade-offs</p>
             </div>
           </article>
 
@@ -873,10 +836,7 @@
             <span class="cfp-topic-number">11</span>
             <div>
               <h3>Multimodal Agents and AI Systems</h3>
-              <p>
-                Unlearning for multimodal agents and
-                real-world AI systems
-              </p>
+              <p>Unlearning for multimodal agents and real-world AI systems</p>
             </div>
           </article>
 
@@ -884,11 +844,7 @@
             <span class="cfp-topic-number">12</span>
             <div>
               <h3>Deployment and Open Challenges</h3>
-              <p>
-                Industrial deployment, lifecycle management
-                and open challenges in trustworthy computational
-                unlearning
-              </p>
+              <p>Industrial deployment, lifecycle management and open challenges in trustworthy computational unlearning</p>
             </div>
           </article>
 
@@ -901,13 +857,11 @@
       <div class="cfp-container">
 
         <div class="cfp-section-heading">
-          <p class="cfp-eyebrow">Share your research</p>
-
-          <h2>Contribution Types</h2>
-
+          <p class="cfp-eyebrow">Share Your Research</p>
+          <h2>Types of Contributions</h2>
           <p>
-            Contributions may address machine unlearning from
-            theoretical, empirical, application-oriented or
+            MULVA welcomes contributions addressing machine unlearning
+            from theoretical, empirical, application-oriented and
             critical perspectives
           </p>
         </div>
@@ -917,79 +871,65 @@
           <article class="cfp-contribution-card">
             <div class="cfp-contribution-icon" aria-hidden="true">∑</div>
             <h3>Algorithms and Theory</h3>
-            <p>
-              Novel unlearning algorithms, formal formulations
-              and theoretical analyses
-            </p>
+            <p>Novel unlearning algorithms, formal formulations and theoretical analyses</p>
           </article>
 
           <article class="cfp-contribution-card">
             <div class="cfp-contribution-icon" aria-hidden="true">▥</div>
             <h3>Empirical Evaluations</h3>
-            <p>
-              Empirical studies, systematic comparisons
-              and experimental evaluations
-            </p>
+            <p>Empirical studies, systematic comparisons and experimental evaluations</p>
           </article>
 
           <article class="cfp-contribution-card">
             <div class="cfp-contribution-icon" aria-hidden="true">◈</div>
             <h3>Vision, Language and Multimodal AI</h3>
-            <p>
-              Unlearning studies involving computer vision,
-              natural language processing and multimodal models
-            </p>
+            <p>Unlearning studies involving computer vision, natural language processing and multimodal models</p>
           </article>
 
           <article class="cfp-contribution-card">
             <div class="cfp-contribution-icon" aria-hidden="true">▤</div>
             <h3>Datasets and Benchmarks</h3>
-            <p>
-              Datasets, benchmark suites and evaluation
-              protocols for measuring unlearning
-            </p>
+            <p>Datasets, benchmark suites and evaluation protocols for measuring unlearning</p>
           </article>
 
           <article class="cfp-contribution-card">
             <div class="cfp-contribution-icon" aria-hidden="true">⌘</div>
             <h3>Privacy and Security</h3>
-            <p>
-              Analyses of privacy, security, attacks,
-              information leakage and forgetting verification
-            </p>
+            <p>Analyses of privacy, security, attacks, information leakage and forgetting verification</p>
           </article>
 
           <article class="cfp-contribution-card">
             <div class="cfp-contribution-icon" aria-hidden="true">◇</div>
             <h3>Position and Perspective</h3>
-            <p>
-              Critical perspectives, open research questions
-              and future directions for machine unlearning
-            </p>
+            <p>Critical perspectives, open research questions and future directions for machine unlearning</p>
           </article>
 
         </div>
       </div>
     </section>
 
-    <!-- Closing section -->
+    <!-- Final submission CTA -->
     <section class="cfp-bottom">
       <div class="cfp-container">
         <div class="cfp-bottom-panel">
 
           <div class="cfp-bottom-copy">
             <p class="cfp-eyebrow">MULVA 2026 · ICVGIP</p>
-
-            <h2>What should AI learn to forget?</h2>
-
+            <h2>What Should AI Learn to Forget?</h2>
             <p>
-              Join the research community working towards
-              reliable, efficient and verifiable machine unlearning
+              Join the research community working towards reliable,
+              efficient and verifiable machine unlearning across
+              language, vision and AI
             </p>
           </div>
 
-          <a class="cfp-back-home" href="index.html">
-            Explore the Workshop <span aria-hidden="true">→</span>
+          <a
+            class="cfp-back-home"
+            href="https://openreview.net/group?id=ICVGIP.in/2026/Workshop/MULVA"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Submit Your Paper <span aria-hidden="true">↗</span>
           </a>
 
         </div>
@@ -1005,5 +945,6 @@
   </footer>
 
   <script src="assets/site.js"></script>
+
 </body>
 </html>
