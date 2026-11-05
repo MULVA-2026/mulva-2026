@@ -30,23 +30,12 @@
     }
 
     @media (max-width: 640px) {
-      .header .brand {
-        font-size: 24px;
-      }
-
-      .header .brand small {
-        font-size: 14px;
-      }
+      .header .brand { font-size: 24px; }
+      .header .brand small { font-size: 14px; }
     }
 
-    /* General typography */
-    body {
-      font-size: 17px;
-    }
-
-    .nav a {
-      font-size: 14px;
-    }
+    body { font-size: 17px; }
+    .nav a { font-size: 14px; }
 
     /* Full-width photographic hero banner */
     .hero-banner {
@@ -123,9 +112,7 @@
     }
 
     /* Page introduction */
-    .section.intro {
-      padding-bottom: 10px;
-    }
+    .section.intro { padding-bottom: 10px; }
 
     .section.intro h2 {
       font-size: clamp(29px, 3vw, 36px);
@@ -151,9 +138,7 @@
     }
 
     /* Programme Committee heading */
-    .committee-section {
-      padding-top: 20px;
-    }
+    .committee-section { padding-top: 20px; }
 
     .committee-section > .eyebrow {
       font-size: 15px;
@@ -180,7 +165,7 @@
       max-width: 900px;
     }
 
-    /* Committee member cards */
+    /* Committee member cards - without numbering */
     .committee-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -190,10 +175,9 @@
 
     .committee-card {
       display: flex;
-      align-items: flex-start;
-      gap: 16px;
+      align-items: center;
       min-width: 0;
-      padding: 22px 22px;
+      padding: 22px;
       background: #ffffff;
       border: 1px solid #e3eaf6;
       border-left: 4px solid #7041a6;
@@ -205,34 +189,6 @@
     .committee-card:hover {
       transform: translateY(-3px);
       box-shadow: 0 7px 20px rgba(28, 58, 110, 0.09);
-    }
-
-    .committee-number {
-      flex: 0 0 42px;
-      display: grid;
-      place-items: center;
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      background: #e9eaff;
-      color: #5733a3;
-      font-size: 17px;
-      font-weight: 800;
-    }
-
-    .committee-card:nth-child(4n + 2) .committee-number {
-      background: #e2efff;
-      color: #0758e8;
-    }
-
-    .committee-card:nth-child(4n + 3) .committee-number {
-      background: #dff6f1;
-      color: #008c7b;
-    }
-
-    .committee-card:nth-child(4n + 4) .committee-number {
-      background: #ffeadf;
-      color: #e84d19;
     }
 
     .committee-details {
@@ -266,9 +222,7 @@
       line-height: 1.65;
     }
 
-    .committee-note strong {
-      color: #45216f;
-    }
+    .committee-note strong { color: #45216f; }
 
     /* Mobile layout */
     @media (max-width: 740px) {
@@ -277,17 +231,13 @@
         padding: 42px 24px;
       }
 
-      .hero-banner-image {
-        object-position: 60% center;
-      }
+      .hero-banner-image { object-position: 60% center; }
 
       .hero-banner-overlay h1 {
         font-size: clamp(40px, 11vw, 56px);
       }
 
-      .hero-banner-overlay .subtitle {
-        font-size: 21px;
-      }
+      .hero-banner-overlay .subtitle { font-size: 21px; }
 
       .hero-banner-overlay p:not(.eyebrow):not(.subtitle) {
         font-size: 16px;
@@ -298,30 +248,10 @@
         gap: 13px;
       }
 
-      .committee-card {
-        padding: 18px;
-      }
-
-      .committee-card h3 {
-        font-size: 17px;
-      }
-
-      .committee-card p {
-        font-size: 14px;
-      }
-
-      .committee-note {
-        padding: 18px;
-      }
-    }
-
-    @media (max-width: 560px) {
-      .committee-number {
-        flex-basis: 38px;
-        width: 38px;
-        height: 38px;
-        font-size: 15px;
-      }
+      .committee-card { padding: 18px; }
+      .committee-card h3 { font-size: 17px; }
+      .committee-card p { font-size: 14px; }
+      .committee-note { padding: 18px; }
     }
   </style>
 </head>
@@ -366,19 +296,13 @@
       >
 
       <div class="hero-banner-overlay">
-
         <p class="eyebrow">ICVGIP 2026 WORKSHOP</p>
 
         <h1>Programme Committee</h1>
 
-        <p class="subtitle">
-          MULVA 2026
-        </p>
+        <p class="subtitle">MULVA 2026</p>
 
-        <p>
-          Machine Unlearning for Language, Vision and AI
-        </p>
-
+        <p>Machine Unlearning for Language, Vision and AI</p>
       </div>
 
     </section>
@@ -388,12 +312,10 @@
 
       <div>
         <p class="eyebrow">OUR ACADEMIC AND INDUSTRY EXPERTS</p>
-
         <h2>Programme Committee</h2>
       </div>
 
       <div class="copy">
-
         <p>
           The Programme Committee of MULVA 2026 brings together
           distinguished academics, scientists and industry experts
@@ -405,7 +327,6 @@
           evaluation of research submissions and the scientific
           quality of the workshop
         </p>
-
       </div>
 
     </section>
@@ -417,15 +338,9 @@
 
       <h2>Meet the Programme Committee</h2>
 
-      <p class="muted">
-        Our Programme Committee comprises 15 members representing
-        academia, industry and research organisations
-      </p>
-
       <div class="committee-grid">
 
         <article class="committee-card">
-          <span class="committee-number">01</span>
           <div class="committee-details">
             <h3>Prof. (Dr.) Animesh Mukherjee</h3>
             <p>Professor, IIT Kharagpur, India</p>
@@ -433,7 +348,6 @@
         </article>
 
         <article class="committee-card">
-          <span class="committee-number">02</span>
           <div class="committee-details">
             <h3>Prof. (Dr.) Arijit Roy</h3>
             <p>Assistant Professor, IIT Patna, India</p>
@@ -441,7 +355,6 @@
         </article>
 
         <article class="committee-card">
-          <span class="committee-number">03</span>
           <div class="committee-details">
             <h3>Prof. (Dr.) Tapas Nayak</h3>
             <p>Assistant Professor, IIT Roorkee, India</p>
@@ -449,7 +362,6 @@
         </article>
 
         <article class="committee-card">
-          <span class="committee-number">04</span>
           <div class="committee-details">
             <h3>Prof. (Dr.) Oishila Bandyopadhyay</h3>
             <p>IIIT Kalyani, India</p>
@@ -457,7 +369,6 @@
         </article>
 
         <article class="committee-card">
-          <span class="committee-number">05</span>
           <div class="committee-details">
             <h3>Prof. (Dr.) Sujay Saha</h3>
             <p>Heritage Institute of Technology, India</p>
@@ -465,7 +376,6 @@
         </article>
 
         <article class="committee-card">
-          <span class="committee-number">06</span>
           <div class="committee-details">
             <h3>Dr. Paheli Bhattacharya</h3>
             <p>Data Scientist, Deloitte, India</p>
@@ -473,7 +383,6 @@
         </article>
 
         <article class="committee-card">
-          <span class="committee-number">07</span>
           <div class="committee-details">
             <h3>Dr. Rupayan Chakraborty</h3>
             <p>Senior Scientist, TCS Research, India</p>
@@ -481,7 +390,6 @@
         </article>
 
         <article class="committee-card">
-          <span class="committee-number">08</span>
           <div class="committee-details">
             <h3>Dr. Manjira Sinha</h3>
             <p>Senior Scientist, TCS Research, India</p>
@@ -489,7 +397,6 @@
         </article>
 
         <article class="committee-card">
-          <span class="committee-number">09</span>
           <div class="committee-details">
             <h3>Prof. Mili Sarkar</h3>
             <p>Assistant Professor, IEM, India</p>
@@ -497,7 +404,6 @@
         </article>
 
         <article class="committee-card">
-          <span class="committee-number">10</span>
           <div class="committee-details">
             <h3>Dr. Rajat Pal</h3>
             <p>Chief Architect, TCS Research, India</p>
@@ -505,7 +411,6 @@
         </article>
 
         <article class="committee-card">
-          <span class="committee-number">11</span>
           <div class="committee-details">
             <h3>Mr. Partha Sarathi Chakraborty</h3>
             <p>Principal Data Scientist, Providence Global Center, India</p>
@@ -513,7 +418,6 @@
         </article>
 
         <article class="committee-card">
-          <span class="committee-number">12</span>
           <div class="committee-details">
             <h3>Mr. Ishan Verma</h3>
             <p>Scientist, TCS Research, India</p>
@@ -521,7 +425,6 @@
         </article>
 
         <article class="committee-card">
-          <span class="committee-number">13</span>
           <div class="committee-details">
             <h3>Prof. Sangeeta Sarkar</h3>
             <p>Associate Professor of Practice, IEM, India</p>
@@ -529,7 +432,6 @@
         </article>
 
         <article class="committee-card">
-          <span class="committee-number">14</span>
           <div class="committee-details">
             <h3>Ms. Sudeshna Jana</h3>
             <p>Researcher, TCS Research, India</p>
@@ -537,7 +439,6 @@
         </article>
 
         <article class="committee-card">
-          <span class="committee-number">15</span>
           <div class="committee-details">
             <h3>Ms. Diya Saha</h3>
             <p>Researcher, TCS Research, India</p>
