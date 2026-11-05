@@ -1,0 +1,591 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Programme Committee of MULVA 2026: Machine Unlearning for Language, Vision and AI — ICVGIP 2026 Workshop">
+  <title>Programme Committee | MULVA 2026</title>
+  <link rel="stylesheet" href="assets/style.css">
+
+  <style>
+    /* Consistent workshop branding */
+    .header .brand {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      font-size: 28px;
+      font-weight: 800;
+      line-height: 1.15;
+      text-decoration: none;
+    }
+
+    .header .brand small {
+      display: block;
+      margin-top: 5px;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    @media (max-width: 640px) {
+      .header .brand {
+        font-size: 24px;
+      }
+
+      .header .brand small {
+        font-size: 14px;
+      }
+    }
+
+    /* General typography */
+    body {
+      font-size: 17px;
+    }
+
+    .nav a {
+      font-size: 14px;
+    }
+
+    /* Full-width photographic hero banner */
+    .hero-banner {
+      position: relative;
+      width: 100%;
+      min-height: 340px;
+      box-sizing: border-box;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      padding: 55px clamp(24px, 7vw, 100px);
+      background: #11172b;
+      isolation: isolate;
+      border-radius: 0;
+    }
+
+    .hero-banner-image {
+      position: absolute;
+      inset: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      z-index: -2;
+    }
+
+    .hero-banner::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        90deg,
+        rgba(8, 13, 35, 0.90) 0%,
+        rgba(8, 13, 35, 0.72) 45%,
+        rgba(8, 13, 35, 0.12) 100%
+      );
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .hero-banner-overlay {
+      position: relative;
+      width: 100%;
+      max-width: 850px;
+      color: #ffffff;
+    }
+
+    .hero-banner-overlay h1 {
+      margin: 12px 0;
+      color: #ffffff;
+      font-size: clamp(42px, 6vw, 68px);
+      line-height: 1.08;
+    }
+
+    .hero-banner-overlay .subtitle {
+      font-size: clamp(21px, 3vw, 30px);
+      line-height: 1.35;
+      color: #ffffff;
+    }
+
+    .hero-banner-overlay p:not(.eyebrow):not(.subtitle) {
+      max-width: 720px;
+      font-size: 17px;
+      line-height: 1.7;
+      color: #ffffff;
+    }
+
+    .hero-banner-overlay .eyebrow {
+      color: #d4dcff;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 3px;
+    }
+
+    /* Page introduction */
+    .section.intro {
+      padding-bottom: 10px;
+    }
+
+    .section.intro h2 {
+      font-size: clamp(29px, 3vw, 36px);
+      line-height: 1.2;
+      letter-spacing: -0.6px;
+      color: #101b43;
+      margin-top: 8px;
+      margin-bottom: 12px;
+    }
+
+    .section.intro .eyebrow {
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 2.8px;
+      color: #1765ed;
+    }
+
+    .section.intro .copy p {
+      font-size: 16px;
+      line-height: 1.7;
+      color: #182747;
+      margin-bottom: 10px;
+    }
+
+    /* Programme Committee heading */
+    .committee-section {
+      padding-top: 20px;
+    }
+
+    .committee-section > .eyebrow {
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 2.8px;
+      color: #1765ed;
+    }
+
+    .committee-section > h2 {
+      font-size: clamp(29px, 3vw, 36px);
+      line-height: 1.2;
+      letter-spacing: -0.6px;
+      color: #101b43;
+      margin-top: 8px;
+      margin-bottom: 12px;
+    }
+
+    .committee-section > .muted {
+      font-size: 16px;
+      line-height: 1.65;
+      color: #465574;
+      margin-top: 6px;
+      margin-bottom: 26px;
+      max-width: 900px;
+    }
+
+    /* Committee member cards */
+    .committee-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 25px;
+    }
+
+    .committee-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      min-width: 0;
+      padding: 22px 22px;
+      background: #ffffff;
+      border: 1px solid #e3eaf6;
+      border-left: 4px solid #7041a6;
+      border-radius: 14px;
+      box-shadow: 0 3px 12px rgba(28, 58, 110, 0.035);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .committee-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 7px 20px rgba(28, 58, 110, 0.09);
+    }
+
+    .committee-number {
+      flex: 0 0 42px;
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: #e9eaff;
+      color: #5733a3;
+      font-size: 17px;
+      font-weight: 800;
+    }
+
+    .committee-card:nth-child(4n + 2) .committee-number {
+      background: #e2efff;
+      color: #0758e8;
+    }
+
+    .committee-card:nth-child(4n + 3) .committee-number {
+      background: #dff6f1;
+      color: #008c7b;
+    }
+
+    .committee-card:nth-child(4n + 4) .committee-number {
+      background: #ffeadf;
+      color: #e84d19;
+    }
+
+    .committee-details {
+      min-width: 0;
+    }
+
+    .committee-card h3 {
+      color: #101b43;
+      font-size: 18px;
+      font-weight: 750;
+      line-height: 1.4;
+      margin: 0 0 7px;
+    }
+
+    .committee-card p {
+      color: #465574;
+      font-size: 15px;
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    /* Committee summary */
+    .committee-note {
+      margin-top: 32px;
+      padding: 22px 25px;
+      border-radius: 14px;
+      background: #f0f3ff;
+      border: 1px solid #e0e5fa;
+      color: #182747;
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    .committee-note strong {
+      color: #45216f;
+    }
+
+    /* Mobile layout */
+    @media (max-width: 740px) {
+      .hero-banner {
+        min-height: 390px;
+        padding: 42px 24px;
+      }
+
+      .hero-banner-image {
+        object-position: 60% center;
+      }
+
+      .hero-banner-overlay h1 {
+        font-size: clamp(40px, 11vw, 56px);
+      }
+
+      .hero-banner-overlay .subtitle {
+        font-size: 21px;
+      }
+
+      .hero-banner-overlay p:not(.eyebrow):not(.subtitle) {
+        font-size: 16px;
+      }
+
+      .committee-grid {
+        grid-template-columns: 1fr;
+        gap: 13px;
+      }
+
+      .committee-card {
+        padding: 18px;
+      }
+
+      .committee-card h3 {
+        font-size: 17px;
+      }
+
+      .committee-card p {
+        font-size: 14px;
+      }
+
+      .committee-note {
+        padding: 18px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .committee-number {
+        flex-basis: 38px;
+        width: 38px;
+        height: 38px;
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header and navigation -->
+  <header class="header">
+
+    <a class="brand" href="index.html">
+      <span>MULVA</span>
+      <small>ICVGIP 2026 Workshop</small>
+    </a>
+
+    <button
+      class="toggle"
+      aria-label="Toggle navigation"
+      aria-expanded="false"
+    >☰</button>
+
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="speakers.html">Speakers</a>
+      <a href="organisers.html">Organisers</a>
+      <a class="active" href="program-committee.html">Programme Committee</a>
+      <a href="program.html">Programme</a>
+      <a href="call-for-presentations.html">Call for Papers</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+  </header>
+
+  <main>
+
+    <!-- Hero banner -->
+    <section class="hero-banner">
+
+      <img
+        src="assets/mulva-hero.png"
+        alt="Machine unlearning and artificial intelligence visual"
+        class="hero-banner-image"
+      >
+
+      <div class="hero-banner-overlay">
+
+        <p class="eyebrow">ICVGIP 2026 WORKSHOP</p>
+
+        <h1>Programme Committee</h1>
+
+        <p class="subtitle">
+          MULVA 2026
+        </p>
+
+        <p>
+          Machine Unlearning for Language, Vision and AI
+        </p>
+
+      </div>
+
+    </section>
+
+    <!-- Introduction -->
+    <section class="section intro">
+
+      <div>
+        <p class="eyebrow">OUR ACADEMIC AND INDUSTRY EXPERTS</p>
+
+        <h2>Programme Committee</h2>
+      </div>
+
+      <div class="copy">
+
+        <p>
+          The Programme Committee of MULVA 2026 brings together
+          distinguished academics, scientists and industry experts
+          from leading academic institutions and research organisations
+        </p>
+
+        <p>
+          The committee contributes its expertise towards the
+          evaluation of research submissions and the scientific
+          quality of the workshop
+        </p>
+
+      </div>
+
+    </section>
+
+    <!-- Committee members -->
+    <section class="section committee-section">
+
+      <p class="eyebrow">MULVA 2026</p>
+
+      <h2>Meet the Programme Committee</h2>
+
+      <p class="muted">
+        Our Programme Committee comprises 15 members representing
+        academia, industry and research organisations
+      </p>
+
+      <div class="committee-grid">
+
+        <article class="committee-card">
+          <span class="committee-number">01</span>
+          <div class="committee-details">
+            <h3>Prof. (Dr.) Animesh Mukherjee</h3>
+            <p>Professor, IIT Kharagpur, India</p>
+          </div>
+        </article>
+
+        <article class="committee-card">
+          <span class="committee-number">02</span>
+          <div class="committee-details">
+            <h3>Prof. (Dr.) Arijit Roy</h3>
+            <p>Assistant Professor, IIT Patna, India</p>
+          </div>
+        </article>
+
+        <article class="committee-card">
+          <span class="committee-number">03</span>
+          <div class="committee-details">
+            <h3>Prof. (Dr.) Tapas Nayak</h3>
+            <p>Assistant Professor, IIT Roorkee, India</p>
+          </div>
+        </article>
+
+        <article class="committee-card">
+          <span class="committee-number">04</span>
+          <div class="committee-details">
+            <h3>Prof. (Dr.) Oishila Bandyopadhyay</h3>
+            <p>IIIT Kalyani, India</p>
+          </div>
+        </article>
+
+        <article class="committee-card">
+          <span class="committee-number">05</span>
+          <div class="committee-details">
+            <h3>Prof. (Dr.) Sujay Saha</h3>
+            <p>Heritage Institute of Technology, India</p>
+          </div>
+        </article>
+
+        <article class="committee-card">
+          <span class="committee-number">06</span>
+          <div class="committee-details">
+            <h3>Dr. Paheli Bhattacharya</h3>
+            <p>Data Scientist, Deloitte, India</p>
+          </div>
+        </article>
+
+        <article class="committee-card">
+          <span class="committee-number">07</span>
+          <div class="committee-details">
+            <h3>Dr. Rupayan Chakraborty</h3>
+            <p>Senior Scientist, TCS Research, India</p>
+          </div>
+        </article>
+
+        <article class="committee-card">
+          <span class="committee-number">08</span>
+          <div class="committee-details">
+            <h3>Dr. Manjira Sinha</h3>
+            <p>Senior Scientist, TCS Research, India</p>
+          </div>
+        </article>
+
+        <article class="committee-card">
+          <span class="committee-number">09</span>
+          <div class="committee-details">
+            <h3>Prof. Mili Sarkar</h3>
+            <p>Assistant Professor, IEM, India</p>
+          </div>
+        </article>
+
+        <article class="committee-card">
+          <span class="committee-number">10</span>
+          <div class="committee-details">
+            <h3>Dr. Rajat Pal</h3>
+            <p>Chief Architect, TCS Research, India</p>
+          </div>
+        </article>
+
+        <article class="committee-card">
+          <span class="committee-number">11</span>
+          <div class="committee-details">
+            <h3>Mr. Partha Sarathi Chakraborty</h3>
+            <p>Principal Data Scientist, Providence Global Center, India</p>
+          </div>
+        </article>
+
+        <article class="committee-card">
+          <span class="committee-number">12</span>
+          <div class="committee-details">
+            <h3>Mr. Ishan Verma</h3>
+            <p>Scientist, TCS Research, India</p>
+          </div>
+        </article>
+
+        <article class="committee-card">
+          <span class="committee-number">13</span>
+          <div class="committee-details">
+            <h3>Prof. Sangeeta Sarkar</h3>
+            <p>Associate Professor of Practice, IEM, India</p>
+          </div>
+        </article>
+
+        <article class="committee-card">
+          <span class="committee-number">14</span>
+          <div class="committee-details">
+            <h3>Ms. Sudeshna Jana</h3>
+            <p>Researcher, TCS Research, India</p>
+          </div>
+        </article>
+
+        <article class="committee-card">
+          <span class="committee-number">15</span>
+          <div class="committee-details">
+            <h3>Ms. Diya Saha</h3>
+            <p>Researcher, TCS Research, India</p>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="committee-note">
+        <strong>MULVA 2026</strong> acknowledges the valuable
+        contribution of its Programme Committee members towards
+        promoting rigorous research and meaningful discussions
+        on machine unlearning for language, vision and AI
+      </div>
+
+    </section>
+
+    <!-- Call to action -->
+    <section class="cta">
+
+      <div>
+        <p class="eyebrow">MULVA 2026 · ICVGIP 2026</p>
+
+        <h2>Advancing Research in Machine Unlearning</h2>
+
+        <p class="muted">
+          Join researchers and practitioners to explore the
+          foundations, methods and applications of trustworthy
+          machine unlearning
+        </p>
+      </div>
+
+      <a class="button darkbutton" href="call-for-presentations.html">
+        Call for Papers →
+      </a>
+
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <strong>MULVA 2026</strong>
+    <span>ICVGIP 2026 Workshop</span>
+    <span>Machine Unlearning for Language, Vision and AI</span>
+  </footer>
+
+  <script src="assets/site.js"></script>
+
+</body>
+</html>
